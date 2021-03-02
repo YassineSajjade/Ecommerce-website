@@ -1,0 +1,142 @@
+/* .container {
+    max-width: 1230px;
+    margin: auto;
+} */
+
+.top__bar {
+    float: left;
+    width: 100%;
+    padding: 12px 15px 12px 15px;
+    background: #01426d;
+}
+.top__bar ul{
+    list-style: none;
+    padding: 0;
+}
+
+.top__bar__left{
+    float: left;
+}
+.top__bar__right{
+    float: right;
+}
+
+.top__bar .top__bar__left li:first-child {
+    border-right: 1px solid;
+    padding-right: 30px;
+}
+
+.top__bar .top__bar__left li i {
+    padding-right: 5px;
+}
+
+.top__bar .top__bar__left li, .top__bar .top__bar__right li {
+    margin-right: 30px;
+}
+
+.top__bar ul li {
+    display: inline-block;
+}
+
+.top__bar li {
+    color: #ffffff;
+}
+
+.top__bar ul li {
+    font-size: 14px;
+    float: left;
+    margin-right: 10px;
+}
+
+.top__bar a, .top__bar button {
+    color: #ffffff;
+}
+
+.top__bar a:hover, .top__bar a:hover span, .top__bar button:hover, li.init.dt-sc-toggle:hover {
+    color: #ff6600;
+}
+
+.top__bar__menu ul li a, .top_çbar ul li span {
+    padding-right: 10px;
+}
+
+.top__bar .top__bar__left li:last-child, .top__bar .top__bar__right li:last-child {
+    margin-right: 0px;
+}
+
+.top__bar .top__bar__right .header__currency {
+    border-left: 1px solid;
+    padding-left: 15px;
+}
+
+.top__bar ul li:last-child, .top__bar li:last-child span, .top__bar li:last-child a {
+    border-right: none;
+}
+
+.header__currency{
+    text-align: center;
+}
+
+.header__currency ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header__currency ul li.currency {
+    position: relative;
+}
+
+.header__currency ul li.currency .selector-arrow {
+    position: relative;
+    float: left;
+    width: 100%;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.show {
+    display: block !important;
+}
+
+.header__currency ul .selector-arrow select, .header__currency ul li.currency .selector-arrow:after {
+    color: #ffffff;
+}
+
+.header__currency ul select {
+    /* padding: 0 15px; */
+    font-size: 14px;
+    float: left;
+    padding-top: 5px;
+}
+
+.header__currency ul select {
+    font-size: 14px;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-position: right center;
+    background-image: url(//cdn.shopify.com/s/files/1/0108/7370/0415/t/8/assets/ico-select.svg?v=2311470713116691728);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-color: #fff;
+    padding-right: 28px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    cursor: pointer;
+    outline: none;
+}
+
+.currency option {
+    background: #ffffff;
+    color: #000000;
+}
