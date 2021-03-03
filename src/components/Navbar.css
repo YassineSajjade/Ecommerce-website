@@ -7,16 +7,19 @@
     float: left;
     width: 100%;
     padding: 12px 15px 12px 15px;
-    background: #01426d;
+    background: #016d3b;
 }
+
 .top__bar ul{
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .top__bar__left{
     float: left;
 }
+
 .top__bar__right{
     float: right;
 }
@@ -52,13 +55,13 @@
     color: #ffffff;
 }
 
-.top__bar a:hover, .top__bar a:hover span, .top__bar button:hover, li.init.dt-sc-toggle:hover {
+.top__bar a:hover, .top__bar a:hover span/*.header__currency ul .selector-arrow select:hover , .top__bar button:hover, li.init.dt-sc-toggle:hover*/ {
     color: #ff6600;
 }
-
+/*
 .top__bar__menu ul li a, .top_çbar ul li span {
     padding-right: 10px;
-}
+}*/
 
 .top__bar .top__bar__left li:last-child, .top__bar .top__bar__right li:last-child {
     margin-right: 0px;
@@ -69,7 +72,7 @@
     padding-left: 15px;
 }
 
-.top__bar ul li:last-child, .top__bar li:last-child span, .top__bar li:last-child a {
+.top__bar ul li:last-child,/* .top__bar li:last-child span,*/ .top__bar li:last-child a {
     border-right: none;
 }
 
@@ -101,26 +104,29 @@
     display: block !important;
 }
 
-.header__currency ul .selector-arrow select, .header__currency ul li.currency .selector-arrow:after {
+.header__currency ul .selector-arrow select/*, .header__currency ul li.currency .selector-arrow:after*/ {
     color: #ffffff;
 }
-
+/*
 .header__currency ul select {
-    /* padding: 0 15px; */
+    padding: 0 15px; 
     font-size: 14px;
     float: left;
     padding-top: 5px;
 }
+*/
 
 .header__currency ul select {
-    font-size: 14px;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
     background: none;
     border: none;
     font-weight: bold;
+    font-size: 14px;
+    float: left;
+    cursor: pointer;
 }
 
-select {
+/* select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -131,12 +137,73 @@ select {
     background-color: #fff;
     padding-right: 28px;
     text-indent: 0.01px;
-    text-overflow: '';
-    cursor: pointer;
+    text-overflow: ''; 
     outline: none;
-}
+    cursor: pointer;
+} */
 
 .currency option {
     background: #ffffff;
     color: #000000;
+} 
+
+/****************************************/
+@media screen and (max-width: 767px){
+        .top__bar__left {
+        display: none;
+    }
 }
+
+.header{
+    width: 100%;
+}
+
+.navbar-nav{
+    margin: auto;
+}
+
+.right__header ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.right__header ul li{
+    display: inline-block;
+    color: #016d3b;
+    margin-right: 30px;
+}
+
+.right__header ul li:hover{
+    cursor: pointer;
+    color: #ff6600;
+}
+
+.navbar-brand{
+    color: #016d3b !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item{
+    margin-right: 30px;
+    display: flex;
+    
+}
+
+.navbar-nav .navbar-link:hover{
+    color: #ff6600;
+}
+
+.navbar-nav i:hover{
+    cursor: pointer;
+}
+ 
+.navbar-link{
+    color: #016d3b ;
+    font-weight: bold;margin-right: 10px;
+}
+
+.navbar-nav .nav-item i{
+    margin: auto;
+    color: #016d3b;
+} 
