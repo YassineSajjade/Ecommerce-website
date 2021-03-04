@@ -5,6 +5,35 @@ import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <>
+            <div className="phone-menu" style={{display: "none"}}>
+                <div className="close-icon">
+                    <i className="fas fa-window-close"></i>
+                </div>
+                <div style={{    border: "1px solid #016d3b",marginLeft: "15px",marginRight: "15px"}}></div>
+                <div className="menu-items" >
+                            <ul className="">
+                                <li className="">
+                                    <Link className="navbar-link" to="#">Home</Link>
+                                </li>
+                                <li className="">
+                                    <Link className="navbar-link" to="#">Shop</Link>
+                                    <i className="fas fa-sort-down"></i>
+                                </li>
+                                <li className="">
+                                    <Link className="navbar-link" to="#">Best Sellers</Link>
+                                    <i className="fas fa-sort-down"></i>
+                                </li>
+                                <li className="">
+                                    <Link className="navbar-link" to="#">Deal Of The Day</Link>
+                                    <i className="fas fa-sort-down"></i>
+                                </li>
+                                <li className="">
+                                    <Link className="navbar-link" to="#">Pages</Link>
+                                    <i className="fas fa-sort-down"></i>
+                                </li>
+                            </ul>
+                        </div>
+            </div>
             <div className=" top__bar">
                 <div className="container">
                     <ul className="top__bar__left">
@@ -58,12 +87,9 @@ function Navbar() {
             <div className="header">
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <Link className="navbar-brand" to="#">MyStore</Link>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
+                        <Link className="nav-brand" to="#">MyStore</Link>
 
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div className="navbar-collapse" style={{display: "none"}}>
                             <ul className="navbar-nav">
                                 <li className="nav-item">
                                     <Link className="navbar-link" to="#">Home</Link>
@@ -97,6 +123,12 @@ function Navbar() {
                                 </li>
                             </ul>
                         </div>
+
+                        <button className="navbar-toggler" type="button" style={{borderColor: "#016d3b"}}>
+                            {/* <span className="navbar-toggler-icon"></span> */}
+                            <i class="fas fa-bars" style={{color: "#016d3b"}}></i>
+                        </button>
+
                     </nav>
                 </div>
             </div>
