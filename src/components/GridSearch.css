@@ -1,0 +1,22 @@
+.row .col-left{
+    margin: auto;
+    text-align: center;
+    border: 1px solid;
+    padding: 5px;
+    border-color: #ced4da;
+    border-radius: .25rem;
+    width: 50%;
+}
+.row .col-left span{
+    margin-right: 10px;
+}
+.form-inline {
+    display: flex;
+    flex-flow: row !important;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.form-inline .form-control{
+    width: -webkit-fill-available !important;
+}

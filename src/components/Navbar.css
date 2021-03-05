@@ -55,7 +55,7 @@
     color: #ffffff;
 }
 
-.top__bar a:hover, .top__bar a:hover span/*.header__currency ul .selector-arrow select:hover , .top__bar button:hover, li.init.dt-sc-toggle:hover*/ {
+.top__bar a:hover, .top__bar a:hover span, .header__currency ul .selector-arrow select:hover , .top__bar button:hover, li.init.dt-sc-toggle:hover {
     color: #ff6600;
 }
 /*
@@ -74,6 +74,15 @@
 
 .top__bar ul li:last-child,/* .top__bar li:last-child span,*/ .top__bar li:last-child a {
     border-right: none;
+}
+
+.top__bar .top__bar__left li:hover i{
+    color: #ff6600;
+    text-decoration: none;
+}
+.top__bar .top__bar__left li:hover .span{
+    color: #ff6600;
+    text-decoration: none;
 }
 
 .header__currency{
@@ -230,7 +239,8 @@
     color: #016d3b;
 } 
 
- .phone-menu{
+/* ***************************************** */
+.phone-menu{
     position: fixed;
     /* top: 20px; */
     left: 0;
@@ -244,8 +254,6 @@
     background-color: rgb(255, 255, 255);
     opacity: 1;
 }
-
-/* ***************************************** */
 .close-icon {
     color: #016d3b;
     font-size: 25px;
@@ -264,3 +272,15 @@
     float: right;
     color: #016d3b;
 } 
+
+.phone-menu .menu-items li:hover a{
+    color: #ff6600;
+    text-decoration: none;
+}
+.phone-menu .menu-items li:hover i{
+    color: #ff6600;
+    text-decoration: none;
+}
+.phone-menu .close-icon i:hover{
+    color: #ff6600;
+}

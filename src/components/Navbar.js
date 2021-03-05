@@ -1,92 +1,65 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
 
-    const [show,setShow] = useState("false");
-    let div; 
-    function showMenu(){
-        if(!show){
-           div = <div className="phone-menu" style={{display: "none"}}>
-           <div className="close-icon">
-               <i className="fas fa-window-close"></i>
-           </div>
-           <div style={{    border: "1px solid #016d3b",marginLeft: "15px",marginRight: "15px"}}></div>
-           <div className="menu-items" >
-                       <ul className="">
-                           <li className="">
-                               <Link className="navbar-link" to="#">Home</Link>
-                           </li>
-                           <li className="">
-                               <Link className="navbar-link" to="#">Shop</Link>
-                               <i className="fas fa-sort-down"></i>
-                           </li>
-                           <li className="">
-                               <Link className="navbar-link" to="#">Best Sellers</Link>
-                               <i className="fas fa-sort-down"></i>
-                           </li>
-                           <li className="">
-                               <Link className="navbar-link" to="#">Deal Of The Day</Link>
-                               <i className="fas fa-sort-down"></i>
-                           </li>
-                           <li className="">
-                               <Link className="navbar-link" to="#">Pages</Link>
-                               <i className="fas fa-sort-down"></i>
-                           </li>
-                       </ul>
-                   </div>
-       </div>;
-            console.log("display none / "+show);
+    const [show, setShow] = useState(false);
+    const [display, setDisplay] = useState("none");
+
+    const showMenu = () => {
+        if (!show) {
+            console.log("display none / " + show);
+            setDisplay("block");
             setShow(true)
-        }else{
-            div = <div className="phone-menu" style={{display: "block"}}>
-            <div className="close-icon">
-                <i className="fas fa-window-close"></i>
-            </div>
-            <div style={{    border: "1px solid #016d3b",marginLeft: "15px",marginRight: "15px"}}></div>
-            <div className="menu-items" >
-                        <ul className="">
-                            <li className="">
-                                <Link className="navbar-link" to="#">Home</Link>
-                            </li>
-                            <li className="">
-                                <Link className="navbar-link" to="#">Shop</Link>
-                                <i className="fas fa-sort-down"></i>
-                            </li>
-                            <li className="">
-                                <Link className="navbar-link" to="#">Best Sellers</Link>
-                                <i className="fas fa-sort-down"></i>
-                            </li>
-                            <li className="">
-                                <Link className="navbar-link" to="#">Deal Of The Day</Link>
-                                <i className="fas fa-sort-down"></i>
-                            </li>
-                            <li className="">
-                                <Link className="navbar-link" to="#">Pages</Link>
-                                <i className="fas fa-sort-down"></i>
-                            </li>
-                        </ul>
-                    </div>
-        </div>;
-            console.log("display block / "+show);
+        } else {
+            console.log("display block / " + show);
+            setDisplay("none");
             setShow(false);
         }
     }
 
     return (
         <>
-            {div}
+            <div className="phone-menu" style={{ display: display }}>
+                <div className="close-icon">
+                    <i className="fas fa-window-close" onClick={showMenu}></i>
+                </div>
+                <div style={{ border: "1px solid #016d3b", marginLeft: "15px", marginRight: "15px" }}></div>
+                <div className="menu-items" >
+                    <ul className="">
+                        <li className="">
+                            <Link className="navbar-link" to="#">Home</Link>
+                        </li>
+                        <li className="">
+                            <Link className="navbar-link" to="#">Shop</Link>
+                            <i className="fas fa-sort-down"></i>
+                        </li>
+                        <li className="">
+                            <Link className="navbar-link" to="#">Best Sellers</Link>
+                            <i className="fas fa-sort-down"></i>
+                        </li>
+                        <li className="">
+                            <Link className="navbar-link" to="#">Deal Of The Day</Link>
+                            <i className="fas fa-sort-down"></i>
+                        </li>
+                        <li className="">
+                            <Link className="navbar-link" to="#">Pages</Link>
+                            <i className="fas fa-sort-down"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div className=" top__bar">
                 <div className="container">
                     <ul className="top__bar__left">
                         <li>
                             <i className="fas fa-phone"></i>
-                            <span>(00) 000 111 222</span>
+                            <span className="span">(00) 000 111 222</span>
                         </li>
                         <li>
                             <i className="fas fa-envelope"></i>
-                            <Link to="mailto:info@exemple.com">info@exemple.com</Link>
+                            <Link className="span" to="mailto:info@exemple.com">info@exemple.com</Link>
                         </li>
                     </ul>
                     <ul className="top__bar__right">
@@ -132,7 +105,7 @@ function Navbar() {
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <Link className="nav-brand" to="#">MyStore</Link>
 
-                        <div className="navbar-collapse" style={{display: "none"}}>
+                        <div className="navbar-collapse" style={{ display: "none" }}>
                             <ul className="navbar-nav">
                                 <li className="nav-item">
                                     <Link className="navbar-link" to="#">Home</Link>
@@ -162,14 +135,14 @@ function Navbar() {
                                     <i className="fas fa-shopping-basket"></i>
                                 </li>
                                 <li>
-                                    <i class="fas fa-user"></i>
+                                    <i className="fas fa-user"></i>
                                 </li>
                             </ul>
                         </div>
 
-                        <button className="navbar-toggler" type="button" style={{borderColor: "#016d3b"}} onClick={showMenu} >
+                        <button className="navbar-toggler" type="button" style={{ borderColor: "#016d3b" }} onClick={showMenu} >
                             {/* <span className="navbar-toggler-icon"></span> */}
-                            <i class="fas fa-bars" style={{color: "#016d3b"}}></i>
+                            <i className="fas fa-bars" style={{ color: "#016d3b" }}></i>
                         </button>
 
                     </nav>
