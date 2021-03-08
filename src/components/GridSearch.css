@@ -1,5 +1,7 @@
+.row{
+    justify-content: center;
+}
 .row .col-left{
-    margin: auto;
     text-align: center;
     border: 1px solid;
     padding: 5px;
@@ -7,8 +9,17 @@
     border-radius: .25rem;
     width: 50%;
 }
+.row .col-left:hover{
+    color: #28a745;
+    border-color: #28a745;
+    cursor: pointer;
+}
 .row .col-left span{
     margin-right: 10px;
+}
+.col-right .form-inline .btn{
+    color: #28a745;
+    border-color: #28a745;
 }
 .form-inline {
     display: flex;
@@ -20,3 +31,56 @@
 .form-inline .form-control{
     width: -webkit-fill-available !important;
 }
+/* //////////////// */
+.row-col-list{
+    justify-content: start ;
+    z-index: 1;
+    position: absolute;
+}
+.col-list{
+    width: 240px;
+    /* border: 1px solid;
+    position: relative; */
+    top: 0px;
+}
+.col-list ul{
+    list-style: none;
+    padding: 0;
+    background: #f7f7f7;
+}
+.col-list ul li{
+    padding: 5px;
+    border-bottom: 1px solid;
+    border-bottom-color:#eaeaea ;
+}
+@media screen and (max-width: 480px) {
+    .row-col-list{
+        justify-content: center ;
+    }
+    .col-list{
+        width: 50%;
+        border: 1px solid;
+        position: relative;
+        top: -69px;
+    }
+  }
+  /* ************************* */
+  .slider1{
+      text-align: start !important;
+      left: unset !important;
+      bottom: 45% !important;
+  }
+  .slider2{
+      bottom: 35% !important;
+  }
+  .btn:focus{
+      box-shadow: none !important;
+  }
+  .slider1-link:hover{
+    background: #cca471 !important;
+    color: #ffffff !important;
+  }
+  .slider2-link:hover{
+    background: rgba(255, 0, 0, 0.800) !important;
+    color: #ffffff !important;
+  }

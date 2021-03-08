@@ -7,7 +7,7 @@
     float: left;
     width: 100%;
     padding: 12px 15px 12px 15px;
-    background: #016d3b;
+    background: #28a745;
 }
 
 .top__bar ul{
@@ -179,7 +179,7 @@
 
 .right__header ul li{
     display: inline-block;
-    color: #016d3b;
+    color: #28a745;
     margin-right: 30px;
 }
 
@@ -193,7 +193,7 @@
 }
 
 .nav-brand{
-    color: #016d3b;
+    color: #28a745;
     font-weight: bold;
     display: inline-block;
     padding-top: .3125rem;
@@ -230,13 +230,13 @@
 }
  
 .navbar-link{
-    color: #016d3b ;
+    color: #28a745 ;
     font-weight: bold;margin-right: 10px;
 }
 
 .navbar-nav .nav-item i{
     margin: auto;
-    color: #016d3b;
+    color: #28a745;
 } 
 
 /* ***************************************** */
@@ -255,7 +255,7 @@
     opacity: 1;
 }
 .close-icon {
-    color: #016d3b;
+    color: #28a745;
     font-size: 25px;
     padding: 12px 15px;
     text-align: end;
@@ -270,7 +270,7 @@
 }
 .menu-items ul li i{
     float: right;
-    color: #016d3b;
+    color: #28a745;
 } 
 
 .phone-menu .menu-items li:hover a{

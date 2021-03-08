@@ -9,11 +9,11 @@ function Navbar() {
 
     const showMenu = () => {
         if (!show) {
-            console.log("display none / " + show);
+            // console.log("display none / " + show);
             setDisplay("block");
             setShow(true)
         } else {
-            console.log("display block / " + show);
+            // console.log("display block / " + show);
             setDisplay("none");
             setShow(false);
         }
