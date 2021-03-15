@@ -8,6 +8,8 @@
     border-color: #ced4da;
     border-radius: .25rem;
     width: 50%;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 .row .col-left:hover{
     color: #28a745;
@@ -16,6 +18,9 @@
 }
 .row .col-left span{
     margin-right: 10px;
+}
+.col-right{
+    margin: auto;
 }
 .col-right .form-inline .btn{
     color: #28a745;
@@ -32,38 +37,80 @@
     width: -webkit-fill-available !important;
 }
 /* //////////////// */
+.rowCol{
+    justify-content: start !important;
+}
 .row-col-list{
     justify-content: start ;
     z-index: 1;
     position: absolute;
+    background: #000;
+    
 }
 .col-list{
-    width: 240px;
+    width: 285px;
     /* border: 1px solid;
     position: relative; */
-    top: 0px;
+    /* top: 0px; */
 }
 .col-list ul{
     list-style: none;
     padding: 0;
-    background: #f7f7f7;
+    background: #e00c0c;
+    
 }
 .col-list ul li{
     padding: 5px;
     border-bottom: 1px solid;
     border-bottom-color:#eaeaea ;
 }
-@media screen and (max-width: 480px) {
-    .row-col-list{
-        justify-content: center ;
-    }
+@media screen and (max-width: 1199px){
     .col-list{
-        width: 50%;
-        border: 1px solid;
-        position: relative;
-        top: -69px;
+        width: 240px;
     }
-  }
+
+    @media screen and (max-width: 991px){
+        .col-list{
+            width: 359px;
+        }
+    }
+
+    @media screen and (max-width: 767px){
+        /* .row-col-list{
+            top: 155px;
+            left: 265px;
+        } */
+        .col-list{
+            width: 270px;
+        }
+    }
+}
+
+ /*@media screen and (max-width: 767px) {
+      .row-col-list{
+        justify-content: center ;
+        
+    } 
+     .col-list{
+        width: 50%;
+        position: relative;
+        top: -54px;
+    }
+    @media screen and (max-width: 575px){
+        .col-list{
+            width: 50%;
+            position: relative;
+            top: -70px;
+        }
+    }
+    @media screen and (max-width: 480px){
+        .col-list{
+            width: 50%;
+            position: relative;
+            top: -70px;
+        } 
+    } 
+  }  */
   /* ************************* */
   .slider1{
       text-align: start !important;
@@ -71,6 +118,11 @@
       bottom: 45% !important;
   }
   .slider2{
+      bottom: 35% !important;
+  }
+  .slider3{
+      text-align: start !important;
+      left: unset !important;
       bottom: 35% !important;
   }
   .btn:focus{
