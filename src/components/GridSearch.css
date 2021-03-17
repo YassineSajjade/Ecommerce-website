@@ -175,6 +175,10 @@
       bottom: 20% !important;
   }
 }
+
+  .carousel-caption > *{
+    animation-duration: 1.5s;
+  }
   
   .btn:focus{
       box-shadow: none !important;
