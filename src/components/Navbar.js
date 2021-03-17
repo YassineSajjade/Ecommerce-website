@@ -21,7 +21,7 @@ function Navbar() {
 
     return (
         <>
-            <div className="phone-menu" style={{ display: display }}>
+            <div className="phone-menu animate__animated animate__slideInLeft" style={{ display: display }}>
                 <div className="close-icon">
                     <i className="fas fa-window-close" onClick={showMenu}></i>
                 </div>
