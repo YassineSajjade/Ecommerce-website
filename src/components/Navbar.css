@@ -1,8 +1,12 @@
-/* .container {
-    max-width: 1230px;
-    margin: auto;
-} */
-
+.active-scroll{
+    position: fixed;
+    z-index: 100;
+    background: white;
+    top: 0;
+}
+.container-fluid{
+    padding: 0 !important;
+}
 .top__bar {
     float: left;
     width: 100%;
@@ -165,6 +169,16 @@
 
 .header{
     width: 100%;
+}
+
+.navbar{
+    padding: .5rem 10rem !important;
+}
+
+@media (max-width: 575.98px) {
+    .navbar{
+        padding: .5rem 1rem !important;
+    }
 }
 
 .navbar-nav{

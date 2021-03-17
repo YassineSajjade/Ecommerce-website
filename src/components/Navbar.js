@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
@@ -6,6 +6,7 @@ function Navbar() {
 
     const [show, setShow] = useState(false);
     const [display, setDisplay] = useState("none");
+    const [scroll, setScroll] = useState(false);
 
     const showMenu = () => {
         if (!show) {
@@ -18,6 +19,28 @@ function Navbar() {
             setShow(false);
         }
     }
+
+    const handleScroll = () =>{
+        const offset = window.scrollY;
+        if(offset > 70){
+            console.log(offset);
+            setScroll(true);
+        }else{
+            setScroll(false);
+        }
+    }
+
+    useEffect( () => {
+            window.addEventListener("scroll",handleScroll);
+        return () => {
+            window.removeEventListener('scroll',handleScroll);
+          }
+    });
+
+    //const active = scroll ? "navbar fixed-top navbar-expand-lg navbar-light bg-light" : "navbar navbar-expand-lg navbar-light bg-light" ;
+    const active = scroll ? "fixed-top " : "" ;
+
+    
 
     return (
         <>
@@ -50,7 +73,7 @@ function Navbar() {
                     </ul>
                 </div>
             </div>
-            <div className=" top__bar">
+            <div className= "top__bar" >
                 <div className="container">
                     <ul className="top__bar__left">
                         <li>
@@ -101,7 +124,7 @@ function Navbar() {
                 </div>
             </div>
             <div className="header">
-                <div className="container">
+                <div className={`container-fluid ${active}`}>
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <Link className="nav-brand" to="#">MyStore</Link>
 
