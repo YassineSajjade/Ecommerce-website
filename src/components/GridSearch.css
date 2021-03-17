@@ -123,7 +123,7 @@
   }  */
   /* ************************* */
   .carousel-item{
-      height: 380px;
+      height: 500px;
       background-size: cover;
   }
   .citem1{
@@ -139,15 +139,29 @@
     
   .mobile-item3{
       background-image: url("https://cdn.shopify.com/s/files/1/0108/7370/0415/files/slider-1_834bd35c-8d44-44ed-b5f2-995e3490064e_767x.jpg?v=1581507154");
-  }
+    }
   .mobile-item2{
       background-image: url("https://cdn.shopify.com/s/files/1/0108/7370/0415/files/slider-2_7a3327c4-6914-485b-ac21-af877ec64dfb_767x.jpg?v=1581507110");
   }
   .mobile-item1{
       background-image: url("https://cdn.shopify.com/s/files/1/0108/7370/0415/files/slider-3_9e2bd3f0-2fbd-488b-b46a-80834635b72a_767x.jpg?v=1581507053");
   }
-}
   .slider1{
+      background: rgba(255, 255, 255, 0.6);
+      right: 10% !important;
+      bottom: 25% !important;
+  }
+  .slider2{
+      background: rgba(255, 255, 255, 0.6);
+      bottom: 25% !important;
+  }
+  .slider3{
+      background: rgba(255, 255, 255, 0.6);
+      bottom: 15% !important;
+  }
+}
+@media (min-width: 992px) {
+    .slider1{
       text-align: start !important;
       left: unset !important;
       bottom: 35% !important;
@@ -160,6 +174,8 @@
       left: unset !important;
       bottom: 20% !important;
   }
+}
+  
   .btn:focus{
       box-shadow: none !important;
   }

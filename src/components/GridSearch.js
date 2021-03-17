@@ -64,7 +64,7 @@ function GridSearch() {
                     
 
 
-            <div id="carouselExampleCaptions" className="carousel " style={{ marginTop: "30px" }}>
+            <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel" style={{ marginTop: "30px" }}>
 
                 <ol className="carousel-indicators">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
