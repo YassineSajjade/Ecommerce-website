@@ -20,27 +20,27 @@ function Navbar() {
         }
     }
 
-    const handleScroll = () =>{
+    const handleScroll = () => {
         const offset = window.scrollY;
-        if(offset > 70){
+        if (offset > 70) {
             console.log(offset);
             setScroll(true);
-        }else{
+        } else {
             setScroll(false);
         }
     }
 
-    useEffect( () => {
-            window.addEventListener("scroll",handleScroll);
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
         return () => {
-            window.removeEventListener('scroll',handleScroll);
-          }
+            window.removeEventListener('scroll', handleScroll);
+        }
     });
 
     //const active = scroll ? "navbar fixed-top navbar-expand-lg navbar-light bg-light" : "navbar navbar-expand-lg navbar-light bg-light" ;
-    const active = scroll ? "fixed-top " : "" ;
+    const active = scroll ? "fixed-top " : "";
 
-    
+
 
     return (
         <>
@@ -73,7 +73,7 @@ function Navbar() {
                     </ul>
                 </div>
             </div>
-            <div className= "top__bar" >
+            <div className="top__bar" >
                 <div className="container">
                     <ul className="top__bar__left">
                         <li>
@@ -136,6 +136,116 @@ function Navbar() {
                                 <li className="nav-item">
                                     <Link className="navbar-link" to="#">Shop</Link>
                                     <i className="fas fa-sort-down"></i>
+
+                                    {/* nav-dropdown-hover */}
+                                    <div className="site-nav-dropdown">
+                                        <div className="container">
+
+                                            <div className="row">
+                                                {/* start col left */}
+                                                <div className="col-9">
+                                                    {/* start row 1 col left */}
+                                                    <div className="row" style={{ marginBottom: "10px" }}>
+                                                        <div className="inner col">
+                                                            <div className="div-link">
+                                                                <Link to="#">Fruits</Link>
+                                                            </div>
+                                                            <ul className="dropdown">
+                                                                <li><Link to="#">Apple</Link></li>
+                                                                <li><Link to="#">Orange</Link></li>
+                                                                <li><Link to="#">Cherry</Link></li>
+                                                                <li><Link to="#">Elderberry</Link></li>
+                                                                <li><Link to="#">Capsicom</Link></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="inner col">
+                                                            <div className="div-link">
+                                                                <Link to="#">Vegitables</Link>
+                                                            </div>
+                                                            <ul className="dropdown">
+                                                                <li><Link to="#">Beetroot</Link></li>
+                                                                <li><Link to="#">Broccoli</Link></li>
+                                                                <li><Link to="#">Capsicum</Link></li>
+                                                                <li><Link to="#">Cocumber</Link></li>
+                                                                <li><Link to="#">Plum</Link></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="inner col">
+                                                            <div className="div-link">
+                                                                <Link to="#">Food Grains</Link>
+                                                            </div>
+                                                            <ul className="dropdown">
+                                                                <li><Link to="#">Brown Rice</Link></li>
+                                                                <li><Link to="#">Horse Gram</Link></li>
+                                                                <li><Link to="#">Wheat</Link></li>
+                                                                <li><Link to="#">Rice</Link></li>
+                                                                <li><Link to="#">Cherry</Link></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    {/* end row 1 col left */}
+                                                    {/* start row 2 col left */}
+                                                    <div className="row">
+                                                        <div className="inner col">
+                                                            <div className="div-link">
+                                                                <Link to="#">Farm Foods</Link>
+                                                            </div>
+                                                            <ul className="dropdown">
+                                                                <li><Link to="#">Badam</Link></li>
+                                                                <li><Link to="#">Coriander</Link></li>
+                                                                <li><Link to="#">Chiken Brest</Link></li>
+                                                                <li><Link to="#">Plum</Link></li>
+                                                                <li><Link to="#">Jamun fruit</Link></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="inner col">
+                                                            <div className="div-link">
+                                                                <Link to="#">meat</Link>
+                                                            </div>
+                                                            <ul className="dropdown">
+                                                                <li><Link to="#">Butter Cookies</Link></li>
+                                                                <li><Link to="#">Watermelon</Link></li>
+                                                                <li><Link to="#">TM Rice</Link></li>
+                                                                <li><Link to="#">Potato</Link></li>
+                                                                <li><Link to="#">Badam</Link></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="inner col">
+                                                            <div className="div-link">
+                                                                <Link to="#">Grains</Link>
+                                                            </div>
+                                                            <ul className="dropdown">
+                                                                <li><Link to="#">Capsicum</Link></li>
+                                                                <li><Link to="#">Chicken Boneless</Link></li>
+                                                                <li><Link to="#">Fish</Link></li>
+                                                                <li><Link to="#">Broccoli</Link></li>
+                                                                <li><Link to="#">Beetroot</Link></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    {/* end row 2 col left */}
+                                                </div>
+                                                {/* end col left */}
+
+                                                {/* start col right */}
+                                                <div className="col-3">
+                                                    <div className="row">
+                                                        <div className="col-left">
+                                                            <Link to="#"><img href="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-1_2000x.jpg?v=1585300878" /></Link>
+                                                            <Link to="#"><img href="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-2_2000x.jpg?v=1585300913" /></Link>
+                                                        </div>
+                                                        <div className="col-right">
+                                                            <Link to="#"><img href="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-3_2000x.jpg?v=1585300930" /></Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/* end col right */}
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    {/* nav-dropdown-hover */}
                                 </li>
                                 <li className="nav-item">
                                     <Link className="navbar-link" to="#">Best Sellers</Link>
