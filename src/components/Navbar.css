@@ -234,6 +234,9 @@
     color: #ff6600;
     text-decoration: none;
 }
+.navbar-nav .nav-item:hover .site-nav-dropdown{
+   display: block !important;
+}
 .navbar-nav .nav-item:hover .fas{
     color: #ff6600;
     text-decoration: none;
@@ -255,15 +258,19 @@
 /**********************************************/
 /* nav dropdown hover */
  .site-nav-dropdown{
+     display: none;
     position: absolute;
     z-index: 999;
-    background: antiquewhite;
+    background: #f8f9fa;
     width: 98%;
     padding: 0;
     left: 0;
     right: 0;
-    top: 100%;
+    top: 70%;
     margin: auto;
+    overflow: visible;
+    transform: scaleY(1);
+    transition: all 5s linear;
 }
 .site-nav-dropdown .container .row{
     margin: auto;
@@ -284,7 +291,7 @@
     vertical-align: top;
 }
 .site-nav-dropdown .container .inner .div-link{
-    background: #89c74a;
+    background: #28a745;
     border-bottom: 1px solid #ffffff;
      padding: 10px 15px;
 }
@@ -325,8 +332,12 @@
     padding: 5px 0;
     font-size: 14px;
     color: #000000;
-    position: relative;
+    transition: all 0.4s ease-in-out;
 } 
+.site-nav-dropdown .container ul.dropdown li a:hover{
+    color: #28a745;
+    text-decoration: none;
+}
 
 /* ***************************************** */
 .phone-menu{
