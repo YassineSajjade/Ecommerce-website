@@ -268,9 +268,7 @@
     right: 0;
     top: 70%;
     margin: auto;
-    overflow: visible;
-    transform: scaleY(1);
-    transition: all 5s linear;
+    transition: all .4s ease-in-out;
 }
 .site-nav-dropdown .container .row{
     margin: auto;

@@ -138,12 +138,12 @@ function Navbar() {
                                     <i className="fas fa-sort-down"></i>
 
                                     {/* nav-dropdown-hover */}
-                                    <div className="site-nav-dropdown">
+                                    <div className="site-nav-dropdown animate__animated animate__slideInDown">
                                         <div className="container">
 
                                             <div className="row">
                                                 {/* start col left */}
-                                                <div className="col-9">
+                                                <div className="col-7">
                                                     {/* start row 1 col left */}
                                                     <div className="row" style={{ marginBottom: "10px" }}>
                                                         <div className="inner col">
@@ -228,14 +228,16 @@ function Navbar() {
                                                 {/* end col left */}
 
                                                 {/* start col right */}
-                                                <div className="col-3">
+                                                <div className="col-5">
                                                     <div className="row">
-                                                        <div className="col-left">
-                                                            <Link to="#"><img href="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-1_2000x.jpg?v=1585300878" /></Link>
-                                                            <Link to="#"><img href="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-2_2000x.jpg?v=1585300913" /></Link>
+                                                        <div className="col-6">
+                                                            <div className="row" style={{ marginBottom: "10px"}}><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-1_2000x.jpg?v=1585300878" style={{width: "200px",height: "200px"}} /></Link></div>
+                                                            <div className="row"><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-2_2000x.jpg?v=1585300913" style={{width: "200px",height: "200px"}}/></Link></div>
                                                         </div>
-                                                        <div className="col-right">
-                                                            <Link to="#"><img href="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-3_2000x.jpg?v=1585300930" /></Link>
+                                                        <div className="col-6">
+                                                            <div className="row">
+                                                                <Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-3_2000x.jpg?v=1585300930" style={{height: "410px"}} /></Link>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
