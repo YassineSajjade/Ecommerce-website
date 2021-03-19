@@ -247,7 +247,7 @@ function Navbar() {
                                                 <div className="col-7">
                                                     {/* start row 1 col left */}
                                                     <div className="row" style={{ marginBottom: "10px" }}>
-                                                        <div className="col">
+                                                        <div className="inner col">
                                                             <div className="div-link">
                                                                 <Link to="#">Fruits</Link>
                                                             </div>

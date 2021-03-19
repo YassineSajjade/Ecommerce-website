@@ -19,6 +19,7 @@ function GridSearch() {
 
     return (
         <>
+        {/* grid search section */}
             <div className="container" style={{ marginTop: "10px" }}>
 
                 <div className="row">
@@ -46,24 +47,9 @@ function GridSearch() {
                     </div>
                 </div>
             </div>
+        {/* end grid search section */}
 
-            {/* <div className="container">
-                <div className="row row-col-list">
-                    <div className=" col-list" style={{ display: display }}>
-                        <ul>
-                            <li>Fruits</li>
-                            <li>Vegitables</li>
-                            <li>Flour</li>
-                            <li>Cookies</li>
-                            <li>Meat</li>
-                        </ul>
-                    </div>
-                </div>
-            </div> */}
-                
-                    
-
-
+        {/* start carousel */}
             <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel" style={{ marginTop: "30px" }}>
 
                 <ol className="carousel-indicators">
@@ -111,7 +97,25 @@ function GridSearch() {
                     <span className="sr-only">Next</span>
                 </a>
             </div>
-        </>
+        {/* end carousel */}
+
+        {/* start section types */}
+            <div style={{marginTop: "30px"}}>
+                    <div className="row" style={{marginRight: "0px"}}>
+                        <div className="col-6" style={{height: "250px",display: "flex"}}>
+                            <Link to="/"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/img-1_1920X.jpg?v=1580208074" style={{width: "500px", height: "250px",padding: "10px"}} /></Link>
+                            <div className="div-radius1"></div>
+                        </div>
+                        <div className="col-6" style={{height: "250px",paddingLeft: "0px",display: "flex"}}>
+                            <Link to="/"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/img-2.jpg?v=1580208099" style={{width: "500px", height: "250px",padding: "10px"}}/></Link>
+                            <div className="div-radius2"></div>
+                        </div>
+                    </div>
+            </div>
+        {/* end section types */}
+       
+       
+       </>
     )
 }
 
