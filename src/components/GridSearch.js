@@ -104,11 +104,23 @@ function GridSearch() {
                     <div className="row" style={{marginRight: "0px"}}>
                         <div className="col-6" style={{height: "250px",display: "flex"}}>
                             <Link to="/"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/img-1_1920X.jpg?v=1580208074" style={{width: "500px", height: "250px",padding: "10px"}} /></Link>
-                            <div className="div-radius1"></div>
+                            <div className="div-radius1">
+                                <div className="inside-divRadius">
+                                    <h5 style={{fontSize: "30px",fontWeight: "bold",fontFamily:"Yeseva One, cursive"}}>Veggies</h5>
+                                    <h4 style={{fontSize: "24px",fontWeight: "400",lineHeight: "1.4"}}><span style={{fontWeight: "700"}}>100%</span> Organic Products</h4>
+                                    <Link className="btn btnType" to="/" style={{backgroundColor: "#fe6d30" }}>Buy Now</Link> 
+                                </div>
+                            </div>
                         </div>
                         <div className="col-6" style={{height: "250px",paddingLeft: "0px",display: "flex"}}>
                             <Link to="/"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/img-2.jpg?v=1580208099" style={{width: "500px", height: "250px",padding: "10px"}}/></Link>
-                            <div className="div-radius2"></div>
+                            <div className="div-radius2">
+                            <div className="inside-divRadius">
+                                    <h5 style={{fontSize: "30px",fontWeight: "bold",fontFamily:"Yeseva One, cursive"}}>Fruits</h5>
+                                    <h4 style={{fontSize: "24px",fontWeight: "400",lineHeight: "1.4"}}><span style={{fontWeight: "700"}}>100%</span> Organic Products</h4>
+                                    <Link className="btn btnType" to="/" style={{backgroundColor:"#f4a602"}}>Buy Now</Link> 
+                                </div>
+                            </div>
                         </div>
                     </div>
             </div>

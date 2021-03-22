@@ -218,3 +218,25 @@
     border-bottom-left-radius: 50%;
     margin: 10px;
   }
+  .inside-divRadius{
+    width: 50%;
+    position: absolute;
+    height: 100%;
+    right: 15%;
+    margin: auto;
+    padding-top: 50px;
+  }
+  .btnType{
+    color: #ffffff !important;
+    border: none !important;;
+    border-radius: 30px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: capitalize !important;
+    padding: 5px 25px !important;
+    transition: all .4s ease-in-out !important;
+  }
+  .btnType:hover{
+    background: #89c74a !important;
+    color: #ffffff !important;
+  }
