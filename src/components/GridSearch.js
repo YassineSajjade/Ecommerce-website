@@ -100,7 +100,7 @@ function GridSearch() {
         {/* end carousel */}
 
         {/* start section types */}
-            <div style={{marginTop: "30px"}}>
+            <div style={{marginTop: "30px",marginBottom: "30px"}}>
                     <div className="row" style={{marginRight: "0px"}}>
                         <div className="col-6" style={{height: "250px",display: "flex"}}>
                             <Link to="/"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/img-1_1920X.jpg?v=1580208074" style={{width: "500px", height: "250px",padding: "10px"}} /></Link>

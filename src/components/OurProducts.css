@@ -1,0 +1,24 @@
+.border-header{
+    text-align: center;
+    position: relative;
+}
+.border-header h2{
+    font-family:"Yeseva One, cursive";
+    color: #28a745;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.border-header span{
+    margin-top: 10px;
+    background: url(//cdn.shopify.com/s/files/1/0108/7370/0415/files/leaf.png?v=1580303528);
+    background-repeat: no-repeat;
+    width: 165px;
+    height: 110px;
+    text-align: center;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
