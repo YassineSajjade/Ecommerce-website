@@ -196,16 +196,22 @@
     color: #ffffff !important;
   }
   /*******************************************/
-  .div-radius1{
-    width: 50%;
-    right: 0%;
+  .div-radius{
+    width: 45%;
+    float: right;
+    right: 0px;
     position: absolute;
-    top: 0;
-    height: 230px;
-    background-color: #f9b1af;
-    border-top-left-radius: 50%;
+    height: 100%;
+    padding: 50px 20px 50px 70px;
+    top: 50%;
+    overflow: hidden;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transition: all .35s linear;
     border-bottom-left-radius: 50%;
-    margin: 10px;
+    border-top-left-radius: 50%;
   }
   .div-radius2{
     width: 50%;
