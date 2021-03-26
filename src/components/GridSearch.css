@@ -213,25 +213,6 @@
     border-bottom-left-radius: 50%;
     border-top-left-radius: 50%;
   }
-  .div-radius2{
-    width: 50%;
-    right: 0%;
-    position: absolute;
-    top: 0;
-    height: 230px;
-    background-color: #ffdb4f;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    margin: 10px;
-  }
-  .inside-divRadius{
-    width: 50%;
-    position: absolute;
-    height: 100%;
-    right: 15%;
-    margin: auto;
-    padding-top: 50px;
-  }
   .btnType{
     color: #ffffff !important;
     border: none !important;;
@@ -245,4 +226,24 @@
   .btnType:hover{
     background: #89c74a !important;
     color: #ffffff !important;
+  }
+  @media (max-width: 575.98px) {
+      .divMain{
+          padding: 0 !important;
+          height: 142px !important;
+          margin-bottom: 15px;
+      }
+      .divMain .div-radius{
+          padding: 24px !important;
+          text-align: center !important;
+      }
+      .divMain .div-radius h5{
+        font-size: 16px !important;
+      }
+      .divMain .div-radius h4{
+        font-size: 13px !important;
+      }
+      .divMain .div-radius a{
+        font-size: 10px !important;
+      }
   }
