@@ -1,6 +1,7 @@
 .border-header{
     text-align: center;
     position: relative;
+    margin-bottom: 30px;
 }
 .border-header h2{
     font-family:"Yeseva One, cursive";
@@ -21,4 +22,27 @@
     top: 0;
     right: 0;
     left: 0;
+}
+/*****************************************/
+.brand-names{
+    margin-top: 30px;
+    text-align: center;
+}
+.brand-logo{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-image: url(https://cdn.shopify.com/s/files/1/0108/7370/0415/files/Untitled-1_medium.png?v=1580300513);
+    background: aquamarine;
+    padding: 15px;
+}
+.brand-names .brand-logo a{
+    display: grid;
+    text-align: center;
+}
+.brand-names .brand-logo a img{
+    margin: auto;
 }
