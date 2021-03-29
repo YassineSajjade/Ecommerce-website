@@ -36,13 +36,28 @@
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
     -webkit-mask-image: url(https://cdn.shopify.com/s/files/1/0108/7370/0415/files/Untitled-1_medium.png?v=1580300513);
-    background: aquamarine;
     padding: 15px;
 }
 .brand-names .brand-logo a{
     display: grid;
     text-align: center;
+    text-decoration: none;
 }
 .brand-names .brand-logo a img{
     margin: auto;
+}
+.brand-names .brand-logo a span{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.brand-names .brand-logo:hover{
+    background: #89c74a !important;
+}
+.brand-names .brand-logo:hover a img{
+    filter: invert(1);
+}
+.brand-names .brand-logo:hover span{
+    color: #FFFFFF;
 }
