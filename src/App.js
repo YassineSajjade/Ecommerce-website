@@ -5,6 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import Home from "./components/Home";
+import Basket from "./components/Basket";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             Login
           </Route>
           <Route path="/basket">
-            Basket
+            <Basket/>
           </Route>
           <Route path="/">
             <Home/>

@@ -1,0 +1,28 @@
+.cart-header{
+    background: #28a745;
+    padding: 20px 10px;
+    text-align: center;
+}
+.cart-header h1{
+    color: #ffffff;
+    display: inline-block;
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Yeseva One"
+}
+.cart-header a{
+    display: inline;
+    padding-right: 4px;
+    margin-right: 4px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.cart-header span{
+    display: inline;
+    padding-right: 4px;
+    margin-right: 4px;
+    color: #ffffff;
+}
