@@ -61,3 +61,25 @@
 .brand-names .brand-logo:hover span{
     color: #FFFFFF;
 }
+/* list of products */
+.container-products .list-products{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+}
+.container-products .list-products .item-product{
+    border:1px solid;
+    width:16.666%;
+    margin: 10px;
+}
+.container-products .list-products .item-product .item-product-header img{
+    width: 100%;
+    height: 100%;
+}
+.container-products .list-products .item-product .item-product-body{
+    display: grid;
+    text-align: center;
+}

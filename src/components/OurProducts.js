@@ -10,8 +10,8 @@ function OurProducts() {
                 <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
                 <span></span>
             </div>
-
-            <div className="brand-names row" style={{margin: "auto"}}>
+        {/* brand name filter */}
+            <div className="brand-names row" style={{margin: "auto",marginBottom: "30px"}}>
                 <div className="brand-logo col" style={{background:"#e1ffd9"}}>
                     <Link to="/">
                         <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/icon-6_medium.png?v=1580284143"/>
@@ -50,6 +50,183 @@ function OurProducts() {
                 </div>
 
             </div>
+        
+        {/* list of products */}
+            <div className="container-products" style={{marginTop:"30px"}}>
+                <ul className="list-products">
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>test</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                  
+                   
+                </ul>
+            </div>
+
         </>
     )
 }

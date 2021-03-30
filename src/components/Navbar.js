@@ -227,7 +227,7 @@ function Navbar() {
             </div>
             <div className="header">
                 <div className={`container-fluid ${active}`}>
-                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <nav className="navbar navbar-expand-lg navbar-light">
                         <Link className="nav-brand" to="#">MyStore</Link>
 
                         <div className="navbar-collapse" style={{ display: "none" }}>
