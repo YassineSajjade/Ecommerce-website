@@ -62,7 +62,21 @@ function OurProducts() {
                                 </Link>
                             </div>
                             <div className="item-product-body">
-                                <Link>test</Link>
+                                <Link>Watermelon</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-2.png?v=1612872733"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>Watermelon</Link>
                                 <span>$100.00</span>
                                 <Link className="btn">Add To Cart</Link>
                             </div>
@@ -76,7 +90,21 @@ function OurProducts() {
                                 </Link>
                             </div>
                             <div className="item-product-body">
-                                <Link>test</Link>
+                                <Link>Watermelon</Link>
+                                <span>$100.00</span>
+                                <Link className="btn">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product">
+                        <div>
+                            <div className="item-product-header">
+                                <Link>
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3.png?v=1583912789"/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link>Corionde</Link>
                                 <span>$100.00</span>
                                 <Link className="btn">Add To Cart</Link>
                             </div>
@@ -90,7 +118,7 @@ function OurProducts() {
                                 </Link>
                             </div>
                             <div className="item-product-body">
-                                <Link>test</Link>
+                                <Link>Watermelon</Link>
                                 <span>$100.00</span>
                                 <Link className="btn">Add To Cart</Link>
                             </div>
@@ -104,7 +132,7 @@ function OurProducts() {
                                 </Link>
                             </div>
                             <div className="item-product-body">
-                                <Link>test</Link>
+                                <Link>Watermelon</Link>
                                 <span>$100.00</span>
                                 <Link className="btn">Add To Cart</Link>
                             </div>
@@ -118,7 +146,7 @@ function OurProducts() {
                                 </Link>
                             </div>
                             <div className="item-product-body">
-                                <Link>test</Link>
+                                <Link>Watermelon</Link>
                                 <span>$100.00</span>
                                 <Link className="btn">Add To Cart</Link>
                             </div>
@@ -132,7 +160,7 @@ function OurProducts() {
                                 </Link>
                             </div>
                             <div className="item-product-body">
-                                <Link>test</Link>
+                                <Link>Watermelon</Link>
                                 <span>$100.00</span>
                                 <Link className="btn">Add To Cart</Link>
                             </div>
@@ -146,7 +174,7 @@ function OurProducts() {
                                 </Link>
                             </div>
                             <div className="item-product-body">
-                                <Link>test</Link>
+                                <Link>Watermelon</Link>
                                 <span>$100.00</span>
                                 <Link className="btn">Add To Cart</Link>
                             </div>
@@ -160,7 +188,7 @@ function OurProducts() {
                                 </Link>
                             </div>
                             <div className="item-product-body">
-                                <Link>test</Link>
+                                <Link>Watermelon</Link>
                                 <span>$100.00</span>
                                 <Link className="btn">Add To Cart</Link>
                             </div>
@@ -174,7 +202,7 @@ function OurProducts() {
                                 </Link>
                             </div>
                             <div className="item-product-body">
-                                <Link>test</Link>
+                                <Link>Watermelon</Link>
                                 <span>$100.00</span>
                                 <Link className="btn">Add To Cart</Link>
                             </div>
@@ -188,37 +216,9 @@ function OurProducts() {
                                 </Link>
                             </div>
                             <div className="item-product-body">
-                                <Link>test</Link>
+                                <Link>Watermelon</Link>
                                 <span>$100.00</span>
-                                <Link className="btn">Add To Cart</Link>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="item-product">
-                        <div>
-                            <div className="item-product-header">
-                                <Link>
-                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
-                                </Link>
-                            </div>
-                            <div className="item-product-body">
-                                <Link>test</Link>
-                                <span>$100.00</span>
-                                <Link className="btn">Add To Cart</Link>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="item-product">
-                        <div>
-                            <div className="item-product-header">
-                                <Link>
-                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659"/>
-                                </Link>
-                            </div>
-                            <div className="item-product-body">
-                                <Link>test</Link>
-                                <span>$100.00</span>
-                                <Link className="btn">Add To Cart</Link>
+                                <Link className="btn btnAddToCart">Add To Cart</Link>
                             </div>
                         </div>
                     </li>
