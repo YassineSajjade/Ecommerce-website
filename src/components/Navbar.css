@@ -194,7 +194,7 @@
 
 .right__header ul li{
     display: inline-block;
-    color: #28a745;
+    color: #28a745 !important;
     margin-right: 30px;
 }
 
@@ -204,7 +204,11 @@
 
 .right__header ul li:hover{
     cursor: pointer;
-    color: #ff6600;
+    color: #ff6600 !important;
+}
+.right__header ul li a i:hover{
+    cursor: pointer;
+    color: #ff6600 !important;
 }
 
 .nav-brand{

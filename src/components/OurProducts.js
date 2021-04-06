@@ -1,8 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import "./OurProducts.css";
 
-function OurProducts() {
+function OurProducts(props) {
+
+    if(!props){
+        console.log(props);
+    }
+    
+    // useEffect(() => {
+    //     console.log(props);
+    //     return () => {
+    //         console.log(props);
+    //     }
+    // });
+   
     return (
         <>
             <div className="container border-header">
@@ -50,7 +62,8 @@ function OurProducts() {
                 </div>
 
             </div>
-        
+        {/* end brand name filter */}
+
         {/* list of products */}
             <div className="container-products" style={{marginTop:"30px"}}>
                 <ul className="list-products">
@@ -62,8 +75,8 @@ function OurProducts() {
                                 </Link>
                             </div>
                             <div className="item-product-body">
-                                <Link>Watermelon</Link>
-                                <span>$100.00</span>
+                                <Link>apple</Link>
+                                <span>$3</span>
                                 <Link className="btn">Add To Cart</Link>
                             </div>
                         </div>
@@ -226,7 +239,7 @@ function OurProducts() {
                    
                 </ul>
             </div>
-
+        {/* end list of products */}
         </>
     )
 }

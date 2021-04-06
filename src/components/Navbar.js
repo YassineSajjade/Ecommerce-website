@@ -34,7 +34,7 @@ function Navbar() {
     const handleScroll = () => {
         const offset = window.scrollY;
         if (offset > 70) {
-            console.log(offset);
+            // console.log(offset);
             setScroll(true);
         } else {
             setScroll(false);
@@ -368,7 +368,7 @@ function Navbar() {
                         <div className="right__header">
                             <ul>
                                 <li>
-                                    <i className="fas fa-shopping-basket"></i>
+                                    <Link to="/basket"><i className="fas fa-shopping-basket" style={{color:"#28a745"}}></i></Link>
                                 </li>
                                 <li>
                                     <i className="fas fa-user"></i>
