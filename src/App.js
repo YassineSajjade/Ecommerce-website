@@ -8,6 +8,15 @@ import Home from "./components/Home";
 import Basket from "./components/Basket";
 
 function App() {
+
+  // fetch('localhost:5000/products')
+  // .then(res => {
+  //   console.log(res);
+  // })
+  // .catch(err => {
+  //   console.log(err);
+  // });
+
   return (
     <Router>
       <div className="App">

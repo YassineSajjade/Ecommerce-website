@@ -10,7 +10,7 @@ function Home() {
   const [myData, setmyData] = useState();
   let test = null;
   const getData = () => {
-    fetch('http://localhost/mystore/test.php')
+    fetch('http://localhost:5000/products')
     .then(res => res.json())
     .then(data => {
       setmyData(data);
