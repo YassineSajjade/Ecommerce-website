@@ -16,11 +16,35 @@ function OurProducts(props) {
         }
     },[props]);
 
+
+    const handleData = () => {
+        if(myData != null){
+            myData.map( (item, index) => {
+                return(
+                    <li className="item-product" key={index}>
+                        <div>
+                            <div className="item-product-header">
+                                <Link to="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt=""/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link to="#">{item.name}</Link>
+                                <span>$3</span>
+                                <Link className="btn" to="#">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                )    
+                })
+        }
+    }
+    
     
    
     return (
+        
         <>
-            
             <div className="container border-header">
                 <h2>Our Products</h2>
                 <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
@@ -71,21 +95,32 @@ function OurProducts(props) {
         {/* list of products */}
             <div className="container-products" style={{marginTop:"30px"}}>
                 <ul className="list-products">
-                    <li className="item-product">
-                        <div>
-                            <div className="item-product-header">
-                                <Link to="#">
-                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt=""/>
-                                </Link>
-                            </div>
-                            <div className="item-product-body">
-                                <Link to="#">apple</Link>
-                                <span>$3</span>
-                                <Link className="btn" to="#">Add To Cart</Link>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="item-product">
+                    {
+                        // myData.map( (item, index) => {
+                        //     <li className="item-product" key={index}>
+                        //         <div>
+                        //             <div className="item-product-header">
+                        //                 <Link to="#">
+                        //                     <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt=""/>
+                        //                 </Link>
+                        //             </div>
+                        //             <div className="item-product-body">
+                        //                 <Link to="#">{item.name}</Link>
+                        //                 <span>$3</span>
+                        //                 <Link className="btn" to="#">Add To Cart</Link>
+                        //             </div>
+                        //         </div>
+                        //     </li>
+                        // })
+                        
+                        
+                            handleData
+                
+                
+                        
+                    }
+     
+                     <li className="item-product">
                         <div>
                             <div className="item-product-header">
                                 <Link to="#">
@@ -99,7 +134,7 @@ function OurProducts(props) {
                             </div>
                         </div>
                     </li>
-                    <li className="item-product">
+                    {/*<li className="item-product">
                         <div>
                             <div className="item-product-header">
                                 <Link to="#">
@@ -168,7 +203,7 @@ function OurProducts(props) {
                                 <Link className="btn" to="#">Add To Cart</Link>
                             </div>
                         </div>
-                    </li>
+                    </li> */}
                    
                 </ul>
             </div>
