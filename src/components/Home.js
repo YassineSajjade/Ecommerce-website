@@ -8,7 +8,7 @@ import OurProducts from "./OurProducts";
 function Home() {
 
   const [myData, setmyData] = useState();
-  let test = null;
+
   const getData = () => {
     fetch('http://localhost:5000/products')
     .then(res => res.json())

@@ -80,7 +80,7 @@ function GridSearch() {
                     <div className="carousel-item citem3 mobile-item3">
                         {/* <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/slider-3_2000x.jpg?v=1581341055" className="d-block w-100" alt="..." /> */}
                         <div className="carousel-caption d-md-block slider3">
-                            <div className="icon" style={{ marginBottom: "10px" }}><img src="//cdn.shopify.com/s/files/1/0108/7370/0415/files/slider-icon_100X.png?v=1581426760" style={{ height: "100%"}}/></div>
+                            <div className="icon" style={{ marginBottom: "10px" }}><img src="//cdn.shopify.com/s/files/1/0108/7370/0415/files/slider-icon_100X.png?v=1581426760" alt="" style={{ height: "100%"}}/></div>
                             <h5 className="animate__animated animate__slideInRight" style={{ color: "#000000", fontSize: "18px" }}>100% Healthy & Affordable</h5>
                             <h2 className="animate__animated animate__slideInRight" style={{ color: "#4a8601", fontWeight: "bold", fontFamily: "Yeseva One, cursive" }}>Organic Vegitables</h2>
                             <h4 className="animate__animated animate__slideInRight" style={{ color: "#000000", fontSize: "26px" }}>Small Changes Big Differnce</h4>
@@ -104,7 +104,7 @@ function GridSearch() {
                 <div className="container">
                     <div className="row" style={{margin: "0"}}>
                         <div className="divMain col-lg-6 col-sm-6" style={{height: "250px"/*,display: "flex"*/}}>
-                            <Link to="/"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/img-1_1920X.jpg?v=1580208074" style={{width: "100%", height: "100%"}} /></Link>
+                            <Link to="/"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/img-1_1920X.jpg?v=1580208074" alt="" style={{width: "100%", height: "100%"}} /></Link>
                             <div className="div-radius" style={{backgroundColor: "#f9b1af"}}>
                                 <h5 style={{fontSize: "30px",fontWeight: "bold",fontFamily:"Yeseva One, cursive"}}>Veggies</h5>
                                 <h4 style={{fontSize: "24px",fontWeight: "400",lineHeight: "1.4"}}><span style={{fontWeight: "700"}}>100%</span> Organic Products</h4>
@@ -112,7 +112,7 @@ function GridSearch() {
                             </div>
                         </div>
                         <div className="divMain col-lg-6 col-sm-6" style={{height: "250px"/*,paddingLeft: "0px",display: "flex"*/}}>
-                            <Link to="/"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/img-2.jpg?v=1580208099" style={{width: "100%", height: "100%"}}/></Link>
+                            <Link to="/"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/img-2.jpg?v=1580208099" alt="" style={{width: "100%", height: "100%"}}/></Link>
                             <div className="div-radius" style={{backgroundColor: "#ffdb4f"}}>
                                 <h5 style={{fontSize: "30px",fontWeight: "bold",fontFamily:"Yeseva One, cursive"}}>Fruits</h5>
                                 <h4 style={{fontSize: "24px",fontWeight: "400",lineHeight: "1.4"}}><span style={{fontWeight: "700"}}>100%</span> Organic Products</h4>

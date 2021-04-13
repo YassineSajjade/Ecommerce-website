@@ -148,11 +148,11 @@ function Navbar() {
                                         </div>
                                         <div className="col">
                                             <div className="row" style={{ marginBottom: "10px" }}><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-1_2000x.jpg?v=1585300878" style={{ width: "200px", height: "200px" }} /></Link></div>
-                                            <div className="row"><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-2_2000x.jpg?v=1585300913" style={{ width: "200px", height: "200px" }} /></Link></div>
+                                            <div className="row"><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-2_2000x.jpg?v=1585300913" alt="" style={{ width: "200px", height: "200px" }} /></Link></div>
                                         </div>
                                         <div className="col">
                                             <div className="row">
-                                                <Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-3_2000x.jpg?v=1585300930" style={{ width: "200px", marginTop: "10px" }} /></Link>
+                                                <Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-3_2000x.jpg?v=1585300930"  style={{ width: "200px", marginTop: "10px" }} /></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -332,12 +332,12 @@ function Navbar() {
                                                 <div className="col-5">
                                                     <div className="row">
                                                         <div className="col-6">
-                                                            <div className="row" style={{ marginBottom: "10px" }}><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-1_2000x.jpg?v=1585300878" style={{ width: "200px", height: "200px" }} /></Link></div>
-                                                            <div className="row"><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-2_2000x.jpg?v=1585300913" style={{ width: "200px", height: "200px" }} /></Link></div>
+                                                            <div className="row" style={{ marginBottom: "10px" }}><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-1_2000x.jpg?v=1585300878"alt="" style={{ width: "200px", height: "200px" }} /></Link></div>
+                                                            <div className="row"><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-2_2000x.jpg?v=1585300913"alt="" style={{ width: "200px", height: "200px" }} /></Link></div>
                                                         </div>
                                                         <div className="col-6">
                                                             <div className="row">
-                                                                <Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-3_2000x.jpg?v=1585300930" style={{ height: "410px" }} /></Link>
+                                                                <Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-3_2000x.jpg?v=1585300930" alt="" style={{ height: "410px" }} /></Link>
                                                             </div>
                                                         </div>
                                                     </div>
