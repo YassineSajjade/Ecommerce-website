@@ -14,16 +14,14 @@ function Home() {
     .then(res => res.json())
     .then(data => {
       setmyData(data);
-    });
+    })
+    .catch(err => console.log(err));
   }
 
   
   useEffect(() => {
     getData();
-    return () => {
-      getData();
-    }
-  });
+  },[]);
 
   
   
