@@ -4,43 +4,56 @@ import "./OurProducts.css";
 
 function OurProducts(props) {
 
-    const [myData, setData] = useState();
-
+    const [myData, setData] = useState([]);
+    
     useEffect(() => {
         //setData(props.myData);
         if(props != null){
-            console.log(props);
             setData(props.myData);
         }else{
             console.log("props empty");
         }
     },[props]);
 
-
-    const handleData = () => {
-        if(myData != null){
-            myData.map( (item, index) => {
-                return(
+    const handleData = () =>{
+        return(
+            myData != null 
+            ? myData.map( (item, index) => {
+                return (
                     <li className="item-product" key={index}>
                         <div>
                             <div className="item-product-header">
                                 <Link to="#">
-                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt=""/>
+                                    <img src={item.photo} alt=""/>
                                 </Link>
                             </div>
                             <div className="item-product-body">
                                 <Link to="#">{item.name}</Link>
-                                <span>$3</span>
+                                <span>${item.prix}</span>
                                 <Link className="btn" to="#">Add To Cart</Link>
                             </div>
                         </div>
                     </li>
-                )    
-                })
-        }
+                )
+                
+            }) 
+            :<li className="item-product" >
+                <div>
+                    <div className="item-product-header">
+                        <Link to="#">
+                            <img src="" alt=""/>
+                        </Link>
+                    </div>
+                    <div className="item-product-body">
+                        <Link to="#">No Name</Link>
+                            <span>No Price</span>
+                        <Link className="btn" to="#">Add To Cart</Link>
+                    </div>
+                </div>
+            </li>
+        )
+        
     }
-    
-    
    
     return (
         
@@ -96,115 +109,8 @@ function OurProducts(props) {
             <div className="container-products" style={{marginTop:"30px"}}>
                 <ul className="list-products">
                     {
-                        // myData.map( (item, index) => {
-                        //     <li className="item-product" key={index}>
-                        //         <div>
-                        //             <div className="item-product-header">
-                        //                 <Link to="#">
-                        //                     <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt=""/>
-                        //                 </Link>
-                        //             </div>
-                        //             <div className="item-product-body">
-                        //                 <Link to="#">{item.name}</Link>
-                        //                 <span>$3</span>
-                        //                 <Link className="btn" to="#">Add To Cart</Link>
-                        //             </div>
-                        //         </div>
-                        //     </li>
-                        // })
-                        
-                        
-                            handleData
-                
-                
-                        
-                    }
-     
-                     <li className="item-product">
-                        <div>
-                            <div className="item-product-header">
-                                <Link to="#">
-                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-2.png?v=1612872733" alt=""/>
-                                </Link>
-                            </div>
-                            <div className="item-product-body">
-                                <Link to="#">Watermelon</Link>
-                                <span>$100.00</span>
-                                <Link className="btn" to="#">Add To Cart</Link>
-                            </div>
-                        </div>
-                    </li>
-                    {/*<li className="item-product">
-                        <div>
-                            <div className="item-product-header">
-                                <Link to="#">
-                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt=""/>
-                                </Link>
-                            </div>
-                            <div className="item-product-body">
-                                <Link to="#">Watermelon</Link>
-                                <span>$100.00</span>
-                                <Link className="btn" to="#">Add To Cart</Link>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="item-product">
-                        <div>
-                            <div className="item-product-header">
-                                <Link to="#">
-                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3.png?v=1583912789" alt=""/>
-                                </Link>
-                            </div>
-                            <div className="item-product-body">
-                                <Link to="#">Corionde</Link>
-                                <span>$100.00</span>
-                                <Link className="btn" to="#">Add To Cart</Link>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="item-product">
-                        <div>
-                            <div className="item-product-header">
-                                <Link to="#">
-                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt=""/>
-                                </Link>
-                            </div>
-                            <div className="item-product-body">
-                                <Link to="#">Watermelon</Link>
-                                <span>$100.00</span>
-                                <Link className="btn" to="#">Add To Cart</Link>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="item-product">
-                        <div>
-                            <div className="item-product-header">
-                                <Link to="#">
-                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt=""/>
-                                </Link>
-                            </div>
-                            <div className="item-product-body">
-                                <Link to="#">Watermelon</Link>
-                                <span>$100.00</span>
-                                <Link className="btn" to="#">Add To Cart</Link>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="item-product">
-                        <div>
-                            <div className="item-product-header">
-                                <Link to="#">
-                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt=""/>
-                                </Link>
-                            </div>
-                            <div className="item-product-body">
-                                <Link to="#">Watermelon</Link>
-                                <span>$100.00</span>
-                                <Link className="btn" to="#">Add To Cart</Link>
-                            </div>
-                        </div>
-                    </li> */}
-                   
+                        handleData()
+                    }              
                 </ul>
             </div>
         {/* end list of products */}
