@@ -109,6 +109,7 @@ function OurProducts(props) {
             <div className="container-products" style={{marginTop:"30px"}}>
                 <ul className="list-products">
                     {
+                        
                         handleData()
                     }              
                 </ul>

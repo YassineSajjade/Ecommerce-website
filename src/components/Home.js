@@ -13,7 +13,7 @@ function Home() {
     fetch('http://localhost:5000/products')
     .then(res => res.json())
     .then(data => {
-      setmyData(data);
+      setmyData(data.products);
     })
     .catch(err => console.log(err));
   }
