@@ -14,7 +14,7 @@ function SupportBlock() {
                             <div className="support-section ">
                                 <div className="support-icon" style={{ background: "#ffffff" }}>
                                     <Link className="icon" to="#" style={{ color: "#28a745" }}>
-                                        <i class="fas fa-truck"></i>
+                                        <i className="fas fa-truck"></i>
                                     </Link>
                                 </div>
                                 <div className="support-text">
@@ -28,7 +28,7 @@ function SupportBlock() {
                             <div className="support-section">
                                 <div className="support-icon" style={{ background: "#ffffff" }}>
                                     <Link className="icon" to="#" style={{ color: "#28a745" }}>
-                                        <i class="fas fa-phone"></i>
+                                        <i className="fas fa-phone"></i>
                                     </Link>
                                 </div>
                                 <div className="support-text">
@@ -42,7 +42,7 @@ function SupportBlock() {
                             <div className="support-section">
                                 <div className="support-icon" style={{ background: "#ffffff" }}>
                                     <Link className="icon" to="#" style={{ color: "#28a745" }}>
-                                        <i class="fas fa-headphones"></i>
+                                        <i className="fas fa-headphones"></i>
                                     </Link>
                                 </div>
                                 <div className="support-text">
@@ -56,7 +56,7 @@ function SupportBlock() {
                             <div className="support-section">
                                 <div className="support-icon" style={{ background: "#ffffff" }}>
                                     <Link className="icon" to="#" style={{ color: "#28a745" }}>
-                                        <i class="fas fa-exchange-alt"></i>
+                                        <i className="fas fa-exchange-alt"></i>
                                     </Link>
                                 </div>
                                 <div className="support-text">
