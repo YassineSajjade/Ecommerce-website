@@ -41,12 +41,12 @@ function OurProducts(props) {
                 <div>
                     <div className="item-product-header">
                         <Link to="#">
-                            <img src="" alt=""/>
+                            <img src="https://lh3.googleusercontent.com/proxy/NbNqM8QhvpJ2dj4grj8SP2t_jr4j94e2hscS1PQZ6wJAJmb7vnwPXpFldwPfTrj_qUfnn92MQgUmXOnQYTYxdCtwPCwDwRH6qf7JbtKXN8BxbjBq4y7HyOJpqC8hV9s3wC3uy3QaRNPe_HtU6A8Uc8N9saLPU1AyiXXI2a1D0jNXm3S6CtYU7ohL_lDg3BqNSSHdLg-TSQSZGg0l7Dn-dYPgvd2-47RNZktiAmmV9Gs7eeP_lZ-teju5145lUWn0iIQvu9qNanWjwX-5XqFtoaR3kHdPssWWLss1LExbM8G1ZRmXg2-V8XlWjhcb07n7tT3tANMatJz1Y-VXVqAwJSw269d8f3iwRmB4ePsEEifqfmpitGtWtvxnrgQFw8nJUDQ3NX1z-mN7ZhdMc43nAYv0mRLCQbOCCv9mP5IEomGM0KkK7ypz_8llM213T-09vMRI0ga7XVgXeAI2ZXVFwmbop0wAgx5QX0w2OGLer8ZbBL8HYqapLkDycVfvxwNV2PDxUBrn5dukw-XT2_jkBfbMfygAu5nJ4pXIQsiy-yO2gtGXEhExwHEJTm5_OcxOmfrdqUk" alt=""/>
                         </Link>
                     </div>
                     <div className="item-product-body">
-                        <Link to="#">No Name</Link>
-                            <span>No Price</span>
+                        <Link to="#">Not Available</Link>
+                            <span>Not Available</span>
                         <Link className="btn" to="#">Add To Cart</Link>
                     </div>
                 </div>

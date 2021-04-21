@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react';
 import Navbar from "./Navbar";
 import GridSearche from "./GridSearch";
 import OurProducts from "./OurProducts";
+import SupportBlock from "./SupportBlock";
 
 
 
@@ -31,6 +32,7 @@ function Home() {
           <Navbar/>
           <GridSearche/>  
           <OurProducts myData={myData}/>
+          <SupportBlock/>
         </>
     )
 }

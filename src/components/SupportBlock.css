@@ -1,0 +1,98 @@
+.grid-uniform{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 100%;
+}
+.grid-uniform::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.grid-uniform ul.support-block{
+    list-style: none;
+    border-radius: 10px;
+    padding: 30px 0;
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 100%;
+    display: flex;
+}
+.grid-uniform ul li{
+    line-height: normal;
+    padding-right: 10px;
+    width: 25%;
+}
+.grid-item:hover .support-icon{
+    background: #ff6600 !important;
+}
+.grid-item:hover .support-icon a{
+    color: #ffffff !important;
+}
+.grid-uniform .support-block .support-section{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+.grid-uniform .support-block .support-section .support-icon{
+    margin-bottom: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    float: none;
+    transition: all 0.5s linear;
+}
+.grid-uniform .support-block .support-section .support-icon a{
+    display: block;
+    font-size: 26px;
+    border-radius: 50%;
+    transition: all 0.5s linear;
+    position: relative;
+    z-index: 1;
+}
+.grid-uniform .support-block .support-section .support-icon .icon::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #ff6600;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    border-radius: 50%;
+    transition: all 0.3s linear;
+}
+.grid-uniform .support-block .support-section .support-text{
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 0px;
+    width: 100%;
+    float: none;
+    display: inline-block;
+}
+.grid-uniform .support-block .support-section .support-text h5 {
+    margin-bottom: 5px;
+    font-weight: 700;
+    line-height: 1;
+}
+.grid-uniform .support-block .support-section .support-text p {
+    margin-bottom: 8px;
+    margin: 0 0 15px 0;
+}
+/* second div "invisible-medium" */
+.invisible-medium{
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 25px 0px;
+    padding: 0px;
+    display: block;
+}
