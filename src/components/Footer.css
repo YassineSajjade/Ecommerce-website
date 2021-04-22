@@ -165,3 +165,27 @@ footer .grid-uniformF .grid-threeQuarter .grid--item ul li a{
     text-decoration: none;
     transition: all .3s ease-in-out;
 }
+
+/* copyright section */
+footer .grid-copyright {
+    float: left;
+    min-height: 1px;
+    vertical-align: top;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+footer .grid-copyright .copyright-section{
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px 2%;
+    float: left;
+    width: 100%;
+}
+
+footer .grid-copyright .copyright-section .copyright{
+    float: none;
+    padding: 0px 0 0;
+    margin-bottom: 0px;
+}
