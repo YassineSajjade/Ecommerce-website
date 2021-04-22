@@ -38,6 +38,7 @@ footer .grid-uniformF .invisible-large{
   max-width: 100%;
 }
 
+/* oneQuarter */
 footer .grid-uniformF .grid-oneQuarter{
     width: 25%;
 }
@@ -136,4 +137,31 @@ footer ul li a span{
     font-size: 16px;
     padding: 0;
     transition: all 0.3s linear;
+}
+
+/* ThreeQuarter */
+footer .grid-uniformF .grid-threeQuarter{
+    width: 75%;
+}
+
+footer .grid-uniformF .grid-threeQuarter .grid--item{
+    padding-left: 20px;
+    width: 33.333%;
+}
+
+footer .grid-uniformF .grid-threeQuarter .grid--item h6{
+    font-weight: normal;
+    margin-bottom: 40px;
+    font-family: Poppins;
+    font-size: 20px;;
+}
+
+footer .grid-uniformF .grid-threeQuarter .grid--item ul{
+    display: grid;
+}
+
+footer .grid-uniformF .grid-threeQuarter .grid--item ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
 }

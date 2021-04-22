@@ -10,7 +10,7 @@ function Footer() {
 
                 <div className="invisible-large"></div>
 
-                <div className="container">
+                <div className="container" style={{display: "-webkit-box"}}>
 
                     <div className="grid__item grid-oneQuarter">
 
@@ -78,7 +78,70 @@ function Footer() {
 
                     </div>
 
-                    <div className="grid__item grid-threeQuarter"></div>
+                    <div className="grid__item grid-threeQuarter" style={{display: "-webkit-box"}}>
+
+                        <div className="grid--item">
+                            <h6 style={{color: "#ffffff"}}>Help</h6>
+                            <ul>
+                                <li>
+                                    <Link to="#">Search</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">Help</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">Information</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">Privacy Policy</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">Shipping Information</Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="grid--item">
+                            <h6 style={{color: "#ffffff"}}>Support</h6>
+                            <ul>
+                                <li>
+                                    <Link to="#">Contact</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">Carrers</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">Refund a Returns</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">Deliveries</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">About Us</Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="grid--item">
+                            <h6 style={{color: "#ffffff"}}>Information</h6>
+                            <ul>
+                                <li>
+                                    <Link to="#">Search Terms</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">Advansed search</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">Helps & Faqs</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">Store Location</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">Orders & Returns</Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
 
                     <div className="invisible-large"></div>
 
