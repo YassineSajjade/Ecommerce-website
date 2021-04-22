@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import GridSearche from "./GridSearch";
 import OurProducts from "./OurProducts";
 import SupportBlock from "./SupportBlock";
+import Footer from "./Footer";
 
 
 
@@ -33,6 +34,7 @@ function Home() {
           <GridSearche/>  
           <OurProducts myData={myData}/>
           <SupportBlock/>
+          <Footer/>
         </>
     )
 }

@@ -1,0 +1,139 @@
+footer{
+    background-image: url(https://cdn.shopify.com/s/files/1/0108/7370/0415/files/footer_1920X.jpg?v=1582192383);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 70px 0px 0;
+    margin-top: -115px;
+    float: left;
+    width: 100%;
+}
+
+footer .grid-uniformF {
+    list-style: none;
+}
+
+footer .grid-uniformF .invisible-large{
+    margin: 30px 0px;
+    width: 100%;
+    float: left;
+    clear: both;
+    /* margin: 45px 0px; */
+    padding: 0px;
+    display: block;
+}
+
+.footer .grid-uniformF .grid__item {
+    border: none;
+    float: left;
+    min-height: 1px;
+    vertical-align: top;
+    /* width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; */
+    box-sizing: border-box;
+}
+
+.footer .grid-uniformF .grid__item img{
+  max-width: 100%;
+}
+
+footer .grid-uniformF .grid-oneQuarter{
+    width: 25%;
+}
+
+footer .grid-uniformF .grid-oneQuarter .footer-logo{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+footer .grid-uniformF .grid-oneQuarter .mail-address{
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+}
+footer .grid-uniformF .grid-oneQuarter .mail-address:hover{
+    color: #28a745 !important;
+}
+
+.footer-logo img {
+    margin: 0;
+    padding: 0 0;
+}
+
+footer .grid-uniformF .grid-oneQuarter .address{
+    line-height: 26px;
+    float: left;
+    width: 100%;
+}
+
+footer .address p {
+    width: 100%;
+    position: relative;
+    padding-left: 28px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+footer .address p i {
+    position: absolute;
+    left: 0;
+}
+
+footer i {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+footer .footer-social-links{
+    display: inline-block;
+}
+
+footer .social-icons{
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    text-align: left;
+    margin-top: 20px;
+    padding: 0;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li{
+    float: left;
+    margin: 0 7px 0 0;
+    list-style: none;
+}
+
+footer ul li span{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+footer ul li a:hover{
+    color: #28a745 !important;
+}
+footer ul li a:hover span{
+    background: #ffffff !important;
+}
+
+footer ul li a span{
+    background: #28a745;
+    border: none;
+    width: 28px;
+    height: 28px;
+    line-height: 28px !important;
+    text-align: center;
+    margin-bottom: 4px;
+    float: left;
+    font-size: 16px;
+    padding: 0;
+    transition: all 0.3s linear;
+}
