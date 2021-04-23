@@ -10,35 +10,32 @@
     display: table;
     clear: both;
 }
-.grid-uniform ul.support-block{
-    list-style: none;
+
+.grid-uniform .row{
     border-radius: 10px;
     padding: 30px 0;
     position: relative;
     z-index: 1;
     float: left;
     width: 100%;
-    display: flex;
+    margin-left: 0px !important;
 }
-.grid-uniform ul li{
-    line-height: normal;
-    padding-right: 10px;
-    width: 25%;
-}
-.grid-item:hover .support-icon{
+
+.support-section:hover .support-icon{
     background: #ff6600 !important;
 }
-.grid-item:hover .support-icon a{
+.support-section:hover .support-icon a{
     color: #ffffff !important;
 }
-.grid-uniform .support-block .support-section{
+.grid-uniform .row .support-section{
     display: inline-block;
     width: 100%;
     text-align: center;
     margin: auto;
     position: relative;
 }
-.grid-uniform .support-block .support-section .support-icon{
+
+.grid-uniform .row .support-section .support-icon{
     margin-bottom: 20px;
     border-radius: 50%;
     display: inline-block;
@@ -47,9 +44,9 @@
     height: 65px;
     line-height: 65px;
     float: none;
-    transition: all 0.5s linear;
+    transition: all .4s linear;
 }
-.grid-uniform .support-block .support-section .support-icon a{
+.grid-uniform .row .support-section .support-icon a{
     display: block;
     font-size: 26px;
     border-radius: 50%;
@@ -57,7 +54,7 @@
     position: relative;
     z-index: 1;
 }
-.grid-uniform .support-block .support-section .support-icon .icon::after{
+.grid-uniform .row .support-section .support-icon .icon::after{
     content: '';
     position: absolute;
     width: 100%;
@@ -70,7 +67,7 @@
     border-radius: 50%;
     transition: all 0.3s linear;
 }
-.grid-uniform .support-block .support-section .support-text{
+.grid-uniform .row .support-section .support-text{
     text-align: center;
     margin-left: 0;
     margin-bottom: 0px;
@@ -78,12 +75,12 @@
     float: none;
     display: inline-block;
 }
-.grid-uniform .support-block .support-section .support-text h5 {
+.grid-uniform .row .support-section .support-text h5 {
     margin-bottom: 5px;
     font-weight: 700;
     line-height: 1;
 }
-.grid-uniform .support-block .support-section .support-text p {
+.grid-uniform .row .support-section .support-text p {
     margin-bottom: 8px;
     margin: 0 0 15px 0;
 }
