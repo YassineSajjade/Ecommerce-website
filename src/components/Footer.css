@@ -41,6 +41,7 @@ footer .grid-uniformF .invisible-large{
 /* oneQuarter */
 footer .grid-uniformF .grid-oneQuarter{
     width: 25%;
+    margin-bottom: 30px;
 }
 
 footer .grid-uniformF .grid-oneQuarter .footer-logo{
@@ -147,11 +148,12 @@ footer .grid-uniformF .grid-threeQuarter{
 footer .grid-uniformF .grid-threeQuarter .grid--item{
     padding-left: 20px;
     width: 33.333%;
+    margin-bottom: 20px;
 }
 
 footer .grid-uniformF .grid-threeQuarter .grid--item h6{
     font-weight: normal;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-family: Poppins;
     font-size: 20px;;
 }

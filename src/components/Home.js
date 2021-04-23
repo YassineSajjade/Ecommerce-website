@@ -34,7 +34,7 @@ function Home() {
           <GridSearche/>  
           <OurProducts myData={myData}/>
           <SupportBlock/>
-          {/* <Footer/> */}
+          <Footer/>
         </>
     )
 }
