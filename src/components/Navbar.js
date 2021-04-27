@@ -228,12 +228,12 @@ function Navbar() {
             <div className="header">
                 <div className={`container-fluid ${active}`}>
                     <nav className="navbar navbar-expand-lg navbar-light">
-                        <Link className="nav-brand" to="#">MyStore</Link>
+                        <Link className="nav-brand" to="/">Groc Store</Link>
 
                         <div className="navbar-collapse" style={{ display: "none" }}>
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <Link className="navbar-link" to="#">Home</Link>
+                                    <Link className="navbar-link" to="/">Home</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="navbar-link" to="#">Shop</Link>
