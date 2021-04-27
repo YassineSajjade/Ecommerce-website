@@ -191,3 +191,12 @@ footer .grid-copyright .copyright-section .copyright{
     padding: 0px 0 0;
     margin-bottom: 0px;
 }
+
+footer .grid-copyright .copyright-section a{
+    color: #ffffff;
+    transition: all .4s ease-in-out;
+    text-decoration: none;
+}
+footer .grid-copyright .copyright-section a:hover{
+    color: #28a745 !important;
+}

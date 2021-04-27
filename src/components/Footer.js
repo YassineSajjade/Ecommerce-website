@@ -161,7 +161,7 @@ function Footer() {
             <div className="grid-copyright">
                 <div className="copyright-section text-center" style={{ background: "rgba(0,0,0,0)" }}>
                     <div className="container">
-                        <p className="copyright" style={{ color: "#ffffff" }}>Copyright<a href="https://yassinesajjade.github.io/portfolio-resume/" style={{ color: "#ffffff" }}> Powred by YassineSajjade</a></p>
+                        <p className="copyright" style={{ color: "#ffffff" }}>Copyright<a href="https://yassinesajjade.github.io/portfolio-resume/" > Powred by YassineSajjade</a></p>
                     </div>
                 </div>
             </div>

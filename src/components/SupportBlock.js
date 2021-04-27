@@ -22,7 +22,7 @@ function SupportBlock() {
                             </div>
                         </div>
 
-                        <div className="col-6 col-lg-3 support-section ">
+                        <div className="col-6 col-lg-3 support-section animate__animated  animate__fadeInUp">
                             <div className="support-section">
                                 <div className="support-icon" style={{ background: "#ffffff" }}>
                                     <Link className="icon" to="#" style={{ color: "#28a745" }}>
@@ -36,7 +36,7 @@ function SupportBlock() {
                             </div>
                         </div>
 
-                        <div className="col-6 col-lg-3 support-section ">
+                        <div className="col-6 col-lg-3 support-section animate__animated  animate__fadeInUp">
                             <div className="support-section">
                                 <div className="support-icon" style={{ background: "#ffffff" }}>
                                     <Link className="icon" to="#" style={{ color: "#28a745" }}>
@@ -50,7 +50,7 @@ function SupportBlock() {
                             </div>
                         </div>
 
-                        <div className="col-6 col-lg-3 support-section ">
+                        <div className="col-6 col-lg-3 support-section animate__animated  animate__fadeInUp">
                             <div className="support-section">
                                 <div className="support-icon" style={{ background: "#ffffff" }}>
                                     <Link className="icon" to="#" style={{ color: "#28a745" }}>
