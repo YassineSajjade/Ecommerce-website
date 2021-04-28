@@ -368,7 +368,12 @@ function Navbar() {
                         <div className="right__header">
                             <ul>
                                 <li>
-                                    <Link to="/basket"><i className="fas fa-shopping-basket" style={{color:"#28a745"}}></i></Link>
+                                    <Link to="/basket">
+                                        <i className="fas fa-shopping-basket" style={{color:"#28a745"}}></i>
+                                        <div className="detail">
+                                            <div id="cartCount">0</div>
+                                        </div>
+                                    </Link>
                                 </li>
                                 <li>
                                     <i className="fas fa-user"></i>
