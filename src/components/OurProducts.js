@@ -108,10 +108,51 @@ function OurProducts(props) {
         {/* list of products */}
             <div className="container-products" style={{marginTop:"30px"}}>
                 <ul className="list-products">
-                    {
-                        
+                    <li className="item-product" >
+                        <div>
+                            <div className="item-product-header">
+                                <Link to="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt=""/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link to="#">Watermelon</Link>
+                                    <span>$ 50.00</span>
+                                <Link className="btn" to="#">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product" >
+                        <div>
+                            <div className="item-product-header">
+                                <Link to="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-2.png?v=1612872733" alt=""/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link to="#">Tomato</Link>
+                                    <span>$ 30.00</span>
+                                <Link className="btn" to="#">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="item-product" >
+                        <div>
+                            <div className="item-product-header">
+                                <Link to="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-10_13a4d25e-54fe-4372-8c8e-6bf83c55a4f7.png?v=1584084182" alt=""/>
+                                </Link>
+                            </div>
+                            <div className="item-product-body">
+                                <Link to="#">Potato</Link>
+                                    <span>$ 25.00</span>
+                                <Link className="btn" to="#">Add To Cart</Link>
+                            </div>
+                        </div>
+                    </li>
+                    {/* {
                         handleData()
-                    }              
+                    }               */}
                 </ul>
             </div>
         {/* end list of products */}

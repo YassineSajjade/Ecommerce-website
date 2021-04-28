@@ -225,6 +225,100 @@
 
 }
 
+.right__header #slidedown-cart{
+    width: 350px;
+    position: absolute;
+    right: 13%;
+    top: 100%;
+    -webkit-box-shadow: 0px 0px 30px 0 rgb(0 0 0 / 15%);
+    box-shadow: 0px 0px 30px 0 rgb(0 0 0 / 15%);
+    z-index: 9999999;
+    padding: 0px;
+    text-align: left;
+    line-height: 1.7;
+    background: #ffffff;
+}
+
+.right__header #slidedown-cart ul{
+    float: left;
+    list-style: none;
+    width: 100%;
+    padding: 10px 0 5px;
+    overflow-y: auto;
+    max-height: 394px;
+}
+
+.right__header #slidedown-cart li{
+    border-bottom: 1px solid black;
+    padding: 5px 15px 15px 15px !important;
+    margin-bottom: 10px;
+    float: left;
+    border-radius: 0;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.right__header #slidedown-cart li a.product-image{
+    line-height: normal;
+    float: left;
+    display: block;
+    margin-right: 15px;
+    margin-left: 0px;
+    padding: 0 !important;
+    width: 70px;
+    height: auto;
+}
+
+.right__header #slidedown-cart .product-details{
+    float: left;
+    width: 55%;
+}
+
+.right__header #slidedown-cart .product-details .btn-remove{
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    padding: 0 !important;
+    color: #000000;
+}
+.right__header #slidedown-cart .product-details .product-name{
+    margin: 0;
+}
+
+.right__header #slidedown-cart .product-details .product-name a{
+    line-height: 1.7;
+    padding: 0;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    transition: all .4s ease-in-out;
+}
+.right__header #slidedown-cart .product-details .product-name a:hover{
+    color: #28a745 !important;
+}
+
+.right__header #slidedown-cart .product-details .cart-collateral{
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    list-style: none;
+    color: #000000;
+}
+
+
+.right__header .no-items{
+    padding: 15px 25px;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.right__header .no-items p{
+    margin: 0;
+    color: #000000;
+}
+
 .right__header ul li:last-child{
     margin-right: 0;
 }

@@ -374,6 +374,75 @@ function Navbar() {
                                             <div id="cartCount">0</div>
                                         </div>
                                     </Link>
+                                    <div id="slidedown-cart">
+                                        <div className="no-items" style={{display: "none"}}>
+                                            <p>Your cart is currently empty!</p>
+                                        </div>
+                                        <div className="has-items">
+                                            <ul className="mini-products-list">
+                                                <li className="item">
+                                                    <Link className="product-image" to="#">
+                                                        <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
+                                                    </Link>
+                                                    <div className="product-details">
+                                                        <a href="" title="Remove this item" className="btn-remove">
+                                                            <span className="fas fa-times"></span>
+                                                        </a>
+                                                        <p className="product-name">
+                                                            <Link to="#">Coriander - 4 kg / Gold</Link>
+                                                        </p>
+                                                        <div className="cart-collateral">
+                                                            1 x
+                                                            <span className="price">
+                                                                <span className="mooney"> $ 400.00 USD</span>
+                                                            </span>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </li>
+                                                <li className="item">
+                                                    <Link className="product-image" to="#">
+                                                        <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
+                                                    </Link>
+                                                    <div className="product-details">
+                                                        <a href="" title="Remove this item" className="btn-remove">
+                                                            <span className="fas fa-times"></span>
+                                                        </a>
+                                                        <p className="product-name">
+                                                            <Link to="#">Coriander - 4 kg / Gold</Link>
+                                                        </p>
+                                                        <div className="cart-collateral">
+                                                            1 x
+                                                            <span className="price">
+                                                                <span className="mooney"> $ 400.00 USD</span>
+                                                            </span>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </li>
+                                                <li className="item">
+                                                    <Link className="product-image" to="#">
+                                                        <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
+                                                    </Link>
+                                                    <div className="product-details">
+                                                        <a href="" title="Remove this item" className="btn-remove">
+                                                            <span className="fas fa-times"></span>
+                                                        </a>
+                                                        <p className="product-name">
+                                                            <Link to="#">Coriander - 4 kg / Gold</Link>
+                                                        </p>
+                                                        <div className="cart-collateral">
+                                                            1 x
+                                                            <span className="price">
+                                                                <span className="mooney"> $ 400.00 USD</span>
+                                                            </span>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li>
                                     <i className="fas fa-user"></i>
