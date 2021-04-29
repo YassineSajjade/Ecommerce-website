@@ -367,25 +367,28 @@ function Navbar() {
 
                         <div className="right__header">
                             <ul>
-                                <li>
+                                <li id="liSlide">
                                     <Link to="/basket">
                                         <i className="fas fa-shopping-basket" style={{color:"#28a745"}}></i>
                                         <div className="detail">
                                             <div id="cartCount">0</div>
                                         </div>
                                     </Link>
-                                    <div id="slidedown-cart">
+                                    <div id="slidedown-cart" style={{overflow: "hidden", display: "none"}}>
+
                                         <div className="no-items" style={{display: "none"}}>
                                             <p>Your cart is currently empty!</p>
                                         </div>
+
                                         <div className="has-items">
+
                                             <ul className="mini-products-list">
                                                 <li className="item">
                                                     <Link className="product-image" to="#">
                                                         <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
                                                     </Link>
                                                     <div className="product-details">
-                                                        <a href="" title="Remove this item" className="btn-remove">
+                                                        <a href="#" title="Remove this item" className="btn-remove">
                                                             <span className="fas fa-times"></span>
                                                         </a>
                                                         <p className="product-name">
@@ -405,7 +408,7 @@ function Navbar() {
                                                         <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
                                                     </Link>
                                                     <div className="product-details">
-                                                        <a href="" title="Remove this item" className="btn-remove">
+                                                        <a href="#" title="Remove this item" className="btn-remove">
                                                             <span className="fas fa-times"></span>
                                                         </a>
                                                         <p className="product-name">
@@ -425,7 +428,7 @@ function Navbar() {
                                                         <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
                                                     </Link>
                                                     <div className="product-details">
-                                                        <a href="" title="Remove this item" className="btn-remove">
+                                                        <a href="#" title="Remove this item" className="btn-remove">
                                                             <span className="fas fa-times"></span>
                                                         </a>
                                                         <p className="product-name">
@@ -441,6 +444,30 @@ function Navbar() {
                                                     </div>
                                                 </li>
                                             </ul>
+
+                                            <div className="summary">
+                                                <p className="total">
+                                                    <span className="label">Cart total :</span>
+                                                    <span className="price">
+                                                        <span className="mooney">$ 500.00</span>
+                                                    </span>
+                                                </p>
+                                            </div>
+
+                                            <div className="actions">
+
+                                                <button className="btn">
+                                                    <i className="fas fa-check"></i>
+                                                    Check Out
+                                                </button>
+
+                                                <button className="btn text-cart" style={{marginLeft: "5px"}}>
+                                                    <i className="fas fa-shopping-basket"></i>
+                                                    View Cart
+                                                </button>
+
+                                            </div>
+
                                         </div>
                                     </div>
                                 </li>

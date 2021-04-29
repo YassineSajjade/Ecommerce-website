@@ -229,7 +229,7 @@
     width: 350px;
     position: absolute;
     right: 13%;
-    top: 100%;
+    top: 70%;
     -webkit-box-shadow: 0px 0px 30px 0 rgb(0 0 0 / 15%);
     box-shadow: 0px 0px 30px 0 rgb(0 0 0 / 15%);
     z-index: 9999999;
@@ -237,6 +237,23 @@
     text-align: left;
     line-height: 1.7;
     background: #ffffff;
+    -webkit-animation: slide .4s ease-in-out;
+    animation: slide .4s ease-in-out;
+}
+@keyframes slide
+{
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 383.78px;;
+  }
+}
+
+@media (max-width: 360px) {
+    .right__header #slidedown-cart{
+       right: 1.5%;
+    }
 }
 
 .right__header #slidedown-cart ul{
@@ -306,6 +323,52 @@
     color: #000000;
 }
 
+.right__header #slidedown-cart .summary .total{
+    display: inline-block;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+}
+
+.right__header #slidedown-cart .summary .total .label{
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.right__header #slidedown-cart .summary .total .price{
+    color: #28a745;
+    margin-left: 15px;
+}
+
+.right__header #slidedown-cart .actions{
+    padding: 0 0 24px 0;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    background: #ffffff;
+}
+
+.right__header #slidedown-cart .actions .btn{
+    margin-bottom: 0;
+    font-size: 13px;
+    padding: 12px 20px;
+    border: none;
+    color: #FFFFFF;
+    background: #28a745;
+    border-radius: 30px;
+    transition: all .4s ease-in-out;
+}
+
+.right__header #slidedown-cart .actions .btn:hover{
+    background: #ff6600;
+}
+
+.right__header #slidedown-cart .actions .btn i{
+    margin-right: 12px;
+    color: #FFFFFF !important;
+}
 
 .right__header .no-items{
     padding: 15px 25px;
@@ -323,13 +386,13 @@
     margin-right: 0;
 }
 
-.right__header ul li:hover{
+.right__header ul li:hover i{
     cursor: pointer;
     color: #ff6600 !important;
 }
-.right__header ul li a i:hover{
-    cursor: pointer;
-    color: #ff6600 !important;
+
+.right__header ul li:hover #slidedown-cart{
+    display: block !important;
 }
 
 .nav-brand{
