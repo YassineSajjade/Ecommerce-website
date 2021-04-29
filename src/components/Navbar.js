@@ -388,7 +388,7 @@ function Navbar() {
                                                         <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
                                                     </Link>
                                                     <div className="product-details">
-                                                        <a href="#" title="Remove this item" className="btn-remove">
+                                                        <a href="/" title="Remove this item" className="btn-remove">
                                                             <span className="fas fa-times"></span>
                                                         </a>
                                                         <p className="product-name">
@@ -408,7 +408,7 @@ function Navbar() {
                                                         <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
                                                     </Link>
                                                     <div className="product-details">
-                                                        <a href="#" title="Remove this item" className="btn-remove">
+                                                        <a href="/" title="Remove this item" className="btn-remove">
                                                             <span className="fas fa-times"></span>
                                                         </a>
                                                         <p className="product-name">
@@ -428,7 +428,7 @@ function Navbar() {
                                                         <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
                                                     </Link>
                                                     <div className="product-details">
-                                                        <a href="#" title="Remove this item" className="btn-remove">
+                                                        <a href="/" title="Remove this item" className="btn-remove">
                                                             <span className="fas fa-times"></span>
                                                         </a>
                                                         <p className="product-name">
