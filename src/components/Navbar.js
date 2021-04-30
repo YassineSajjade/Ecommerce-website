@@ -376,14 +376,14 @@ function Navbar() {
                                     </Link>
                                     <div id="slidedown-cart" style={{overflow: "hidden", display: "none"}}>
 
-                                        <div className="no-items" style={{display: "none"}}>
+                                        <div className="no-items">
                                             <p>Your cart is currently empty!</p>
                                         </div>
 
-                                        <div className="has-items">
+                                        <div className="has-items" style={{display: "none"}}>
 
                                             <ul className="mini-products-list">
-                                                <li className="item">
+                                                {/* <li className="item">
                                                     <Link className="product-image" to="#">
                                                         <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
                                                     </Link>
@@ -442,7 +442,7 @@ function Navbar() {
                                                         </div>
                                                         
                                                     </div>
-                                                </li>
+                                                </li> */}
                                             </ul>
 
                                             <div className="summary">

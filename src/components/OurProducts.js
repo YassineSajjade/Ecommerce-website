@@ -63,7 +63,7 @@ function OurProducts(props) {
                 <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
                 <span></span>
             </div>
-        {/* brand name filter */}
+            {/* brand name filter */}
             <div className="brand-names row" style={{margin: "auto",marginBottom: "30px"}}>
                 <div className="brand-logo col" style={{background:"#e1ffd9"}}>
                     <Link to="/">
@@ -103,9 +103,9 @@ function OurProducts(props) {
                 </div>
 
             </div>
-        {/* end brand name filter */}
+            {/* end brand name filter */}
 
-        {/* list of products */}
+            {/* list of products */}
             <div className="container-products" style={{marginTop:"30px"}}>
                 <ul className="list-products">
                     <li className="item-product" >
@@ -155,7 +155,51 @@ function OurProducts(props) {
                     }               */}
                 </ul>
             </div>
-        {/* end list of products */}
+            {/* end list of products */}
+
+            {/* success-modal */}
+            <div className="success-modal modal">
+                <div className="overlay"></div>
+                <div className="content">
+
+                    <div className="modal-left">
+                        <p className="added-to-cart info">Product successfully added to your shopping cart</p>
+                        <img className="product-image" src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt="modal window" />
+                        <div className="cart-desc">
+                            <h3 className="product-title">Watermelon</h3>
+                            <span className="price">$100.00</span>
+                            <p>
+                                Qty:&nbsp
+                                <span className="qty">1</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="modal-right">
+                        <p>
+                            There are
+                            <span className="cartCount">1</span>&nbsp
+                            item(s) in your cart
+                        </p>
+                        <span className="cartTotal">
+                            <span className="mooney">$100.00</span>
+                        </span>
+                        <button className="btn continue-shopping">Continue Shopping</button>
+                        <div className="success-message added-to-cart">
+                            <Link to="basket" className="btn">
+                                <i className="fas fa-shopping-cart"></i>
+                                View Cart
+                            </Link>
+                        </div>
+                    </div>
+
+                    <a className="close-modal">
+                        <i className="fas fa-times-circle"></i>
+                    </a>
+
+                </div>
+            </div>
+            {/* end success-modal */}
         </>
     )
 }
