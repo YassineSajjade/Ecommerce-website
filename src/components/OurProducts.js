@@ -169,8 +169,8 @@ function OurProducts(props) {
                             <h3 className="product-title">Watermelon</h3>
                             <span className="price">$100.00</span>
                             <p>
-                                Qty:&nbsp
-                                <span className="qty">1</span>
+                                Qty:
+                                <span className="qty"> 1</span>
                             </p>
                         </div>
                     </div>
@@ -178,15 +178,17 @@ function OurProducts(props) {
                     <div className="modal-right">
                         <p>
                             There are
-                            <span className="cartCount">1</span>&nbsp
+                            <span className="cartCount"> 1 </span>
                             item(s) in your cart
                         </p>
                         <span className="cartTotal">
                             <span className="mooney">$100.00</span>
                         </span>
-                        <button className="btn continue-shopping">Continue Shopping</button>
+                        <button className="btn continue-shopping">
+                            <Link to="/">Continue Shopping</Link>
+                        </button>
                         <div className="success-message added-to-cart">
-                            <Link to="basket" className="btn">
+                            <Link to="/basket" className="btn">
                                 <i className="fas fa-shopping-cart"></i>
                                 View Cart
                             </Link>
@@ -194,7 +196,7 @@ function OurProducts(props) {
                     </div>
 
                     <a className="close-modal">
-                        <i className="fas fa-times-circle"></i>
+                        <i className="far fa-times-circle"></i>
                     </a>
 
                 </div>

@@ -90,7 +90,9 @@
     margin: 0 0 15px 0;
 }
 .cart-empty a.btn{
+    transition-timing-function: linear;
     -webkit-transition-timing-function: linear;
+    text-decoration: none;
 }
 .cart-empty .btn{
     text-transform: capitalize;

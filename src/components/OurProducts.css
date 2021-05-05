@@ -32,10 +32,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    /* mask-repeat: unset; */
+    mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
     -webkit-mask-size: contain;
+    mask-position: center;
     -webkit-mask-position: center;
+    mask-image: url(https://cdn.shopify.com/s/files/1/0108/7370/0415/files/Untitled-1_medium.png?v=1580300513);
     -webkit-mask-image: url(https://cdn.shopify.com/s/files/1/0108/7370/0415/files/Untitled-1_medium.png?v=1580300513);
     padding: 15px;
 }
@@ -127,4 +130,175 @@
 }
 .container-products .list-products .item-product .item-product-body .btn:hover{
     background: #ff6600;
+}
+
+/* Success modal */
+.success-modal .overlay{
+    background: rgba(3, 13, 29, 0.8);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+
+}
+
+.success-modal .content{
+    padding: 40px;
+    background-color: #ffffff;
+    bottom: auto;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 26% !important;
+    width: 900px;
+    border-radius: 10px;
+    float: left;
+    /* -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); */
+    margin: auto;
+    z-index: 999;
+}
+
+.success-modal .content .modal-left{
+    float: left;
+    padding-right: 15px;
+    width: 40%;
+}
+
+.success-modal .content .modal-left .added-to-cart.info{
+    font-size: 16px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.success-modal .content .modal-left .product-image{
+    width: 25%;
+    float: left;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+.success-modal .content .modal-left .cart-desc{
+    float: left;
+    width: 65%;
+    margin-left: 30px;
+}
+
+.success-modal .content .modal-left .cart-desc .product-title{
+    margin-bottom: 7px;
+    font-size: 22px;
+    font-family: sans-serif;;
+    font-weight: 700;
+}
+
+.success-modal .content .modal-left .cart-desc .price{
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.success-modal .content .modal-right{
+    float: left;
+    width: 60%;
+    padding: 0px;
+    text-align: center;
+}
+
+.success-modal .content .modal-right .btn{
+    padding: 12px 20px;
+}
+
+.success-modal .content .modal-right .cartTotal{
+    float: left;
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 70px;
+}
+
+.success-modal .content .modal-right .continue-shopping{
+    margin-right: 12px;
+    border-radius: 30px;
+    line-height: normal;
+    z-index: 1;
+    overflow: hidden;
+    background: #28a745;
+    border-bottom: 1px solid #ffffff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
+    position: relative;
+}
+
+.success-modal .content .modal-right .continue-shopping:hover{
+    background: #ff6600;
+    color: #ffffff;
+}
+
+.success-modal .content .modal-right .continue-shopping a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.success-modal .content .modal-right .success-message{
+    padding: 0;
+    display: inline-block;
+    line-height: 40px;
+    color: #191919;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.success-modal .content .modal-right .success-message a:hover{
+    color: #ffffff;
+    background: #ff6600;
+}
+
+.success-modal .content .modal-right .success-message a{
+    line-height: normal;
+    text-transform: capitalize;
+    margin-right: 12px;
+    border-radius: 30px;
+    line-height: normal;
+    z-index: 1;
+    overflow: hidden;
+    background: #28a745;
+    border-bottom: 1px solid #ffffff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+}
+
+.success-modal .content .modal-right .success-message a i{
+    margin-right: 12px;
+}
+
+.success-modal .content .close-modal{
+    float: right;
+    top: 0;
+    position: absolute;
+    right: -5px !important;
+    padding: 0;
+    width: 27px;
+    height: 27px;
+    line-height: 27px;
+}
+
+.success-modal .content .close-modal:hover i{
+    color: #28a745;
+    cursor: pointer;
+}
+
+.success-modal .content .close-modal i{
+    font-size: 20px;
+    color: #000000;
+    transition: all .4s ease-in-out;
+    
 }
