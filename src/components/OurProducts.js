@@ -5,6 +5,22 @@ import "./OurProducts.css";
 function OurProducts(props) {
 
     const [myData, setData] = useState([]);
+
+    const [display,setDisplay] = useState("none");
+    const [show,setShow] = useState(false);
+
+    // display and hide success modal
+    const showSuccessModal = () => {
+        if (!show) {
+            //console.log("display none / " + show);
+            setDisplay("block");
+            setShow(true)
+        } else {
+            //console.log("display block / " + show);
+            setDisplay("none");
+            setShow(false);
+        }
+    }
     
     useEffect(() => {
         //setData(props.myData);
@@ -47,7 +63,7 @@ function OurProducts(props) {
                     <div className="item-product-body">
                         <Link to="#">Not Available</Link>
                             <span>Not Available</span>
-                        <Link className="btn" to="#">Add To Cart</Link>
+                        <Link className="btn" to="#" >Add To Cart</Link>
                     </div>
                 </div>
             </li>
@@ -118,7 +134,7 @@ function OurProducts(props) {
                             <div className="item-product-body">
                                 <Link to="#">Watermelon</Link>
                                     <span>$ 50.00</span>
-                                <Link className="btn" to="#">Add To Cart</Link>
+                                <Link className="btn" to="#" onClick={showSuccessModal}>Add To Cart</Link>
                             </div>
                         </div>
                     </li>
@@ -158,7 +174,7 @@ function OurProducts(props) {
             {/* end list of products */}
 
             {/* success-modal */}
-            <div className="success-modal modal">
+            <div className="success-modal modale" style={{display: display}}>
                 <div className="overlay"></div>
                 <div className="content">
 
@@ -196,7 +212,7 @@ function OurProducts(props) {
                     </div>
 
                     <a className="close-modal">
-                        <i className="far fa-times-circle"></i>
+                        <i className="far fa-times-circle" onClick={showSuccessModal}></i>
                     </a>
 
                 </div>
