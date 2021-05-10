@@ -179,6 +179,10 @@ function OurProducts(props) {
             </div>
             {/* end list of products */}
 
+            {/* loading-modal */}
+            <div className="loading-modal modalload" style={{display: "none"}}>Loading</div>
+            {/* end loading-modal */}
+
             {/* success-modal */}
             <div className={`success-modal modale animate__animated ${fade} `}  style={{visibility: display}}>
                 <div className="overlay"></div>
@@ -224,6 +228,15 @@ function OurProducts(props) {
                 </div>
             </div>
             {/* end success-modal */}
+
+            {/* error-modal */}
+            <div className="error-modal modale" style={{display: "none"}}>
+                <div className="modal-inner">
+                    <div className="error-title">Error</div>
+                    <div className="error-message">All 1 Watermelon are in your cart.</div>
+                </div>
+            </div>
+            {/* en error-modal */}
         </>
     )
 }

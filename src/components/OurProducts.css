@@ -315,3 +315,59 @@
     transition: all .4s ease-in-out;
     
 }
+
+/* error-modal */
+.error-modal{
+    left: 0;
+    padding: 10px 20px;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-inner{
+    color: #fff;
+    background: #191919;
+    display: inline-block;
+    padding: 10px 20px;
+    bottom: auto;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 50% !important;
+    width: 900px;
+    border-radius: 10px;
+    float: left;
+    /* -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); */
+    margin: auto;
+    z-index: 999;
+}
+
+/* loading-modal */
+.modalload{
+    position: fixed;
+    z-index: 1000;
+    overflow: hidden;
+    outline: 0;
+}
+
+.loading-modal{
+    background: url(https://cdn.shopify.com/s/files/1/0108/7370/0415/t/8/assets/loading.gif) center 14px no-repeat white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    top: 50% !important;
+    left: 50% !important;
+    width: 56px;
+    height: 56px;
+    margin-left: -28px;
+    margin-top: -28px;
+    padding: 0;
+    /* text-indent: -999em; */
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+    border-radius: 3px;
+    display: block;
+    text-align: center;
+}
