@@ -6,18 +6,24 @@ function OurProducts(props) {
 
     const [myData, setData] = useState([]);
 
-    const [display,setDisplay] = useState("none");
+    // const [display,setDisplay] = useState("none");
+    const [display,setDisplay] = useState("hidden");
     const [show,setShow] = useState(false);
+    const [fade,setFade] = useState("animate__fadeOut");
 
     // display and hide success modal
     const showSuccessModal = () => {
         if (!show) {
             //console.log("display none / " + show);
-            setDisplay("block");
-            setShow(true)
+            setDisplay("visible");
+            // setDisplay("block");
+            setShow(true);
+            setFade("animate__fadeIn");
         } else {
             //console.log("display block / " + show);
-            setDisplay("none");
+            setFade("animate__fadeOut");
+            setDisplay("hidden");
+            // setDisplay("none");
             setShow(false);
         }
     }
@@ -174,7 +180,7 @@ function OurProducts(props) {
             {/* end list of products */}
 
             {/* success-modal */}
-            <div className="success-modal modale" style={{display: display}}>
+            <div className={`success-modal modale animate__animated ${fade} `}  style={{visibility: display}}>
                 <div className="overlay"></div>
                 <div className="content">
 
@@ -201,7 +207,7 @@ function OurProducts(props) {
                             <span className="mooney">$100.00</span>
                         </span>
                         <button className="btn continue-shopping">
-                            <Link to="/">Continue Shopping</Link>
+                            <Link to="/" onClick={showSuccessModal}>Continue Shopping</Link>
                         </button>
                         <div className="success-message added-to-cart">
                             <Link to="/basket" className="btn">
