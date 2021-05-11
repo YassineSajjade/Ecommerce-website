@@ -10,6 +10,7 @@ import Footer from "./Footer";
 function Home() {
 
   const [myData, setmyData] = useState();
+  const [cartCount, setCartCount] = useState(0);
 
   const getData = () => {
     fetch('http://localhost:5000/products')
@@ -25,14 +26,19 @@ function Home() {
     getData();
   },[]);
 
+  // callback function to handle data from childs
+  const handleCallback = (childData) =>{
+    setCartCount(childData);
+}
+
   
   
 
     return (
         <>
-          <Navbar/>
+          <Navbar cartCountP={cartCount} />
           <GridSearche/>  
-          <OurProducts myData={myData}/>
+          <OurProducts myDataP={myData} cartCountP={cartCount} parentCallBackP={handleCallback}/>
           <SupportBlock/>
           <Footer/>
         </>

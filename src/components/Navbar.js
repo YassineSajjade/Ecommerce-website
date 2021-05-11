@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({cartCountP}) {
 
     const [show, setShow] = useState(false);
     const [shop, setShop] = useState(false);
     const [shopDrop, setShopDropDown] = useState("none");
     const [display, setDisplay] = useState("none");
     const [scroll, setScroll] = useState(false);
+    
 
     const showMenu = () => {
         if (!show) {
@@ -371,7 +372,7 @@ function Navbar() {
                                     <Link to="/basket">
                                         <i className="fas fa-shopping-basket" style={{color:"#28a745"}}></i>
                                         <div className="detail">
-                                            <div id="cartCount">0</div>
+                                            <div id="cartCount">{cartCountP}</div>
                                         </div>
                                     </Link>
                                     <div id="slidedown-cart" style={{overflow: "hidden", display: "none"}}>

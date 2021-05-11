@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import "./OurProducts.css";
 
-function OurProducts(props) {
+function OurProducts({myDataP, cartCountP, parentCallBackP}) {
 
     const [myData, setData] = useState([]);
 
@@ -10,6 +10,7 @@ function OurProducts(props) {
     const [display,setDisplay] = useState("hidden");
     const [show,setShow] = useState(false);
     const [fade,setFade] = useState("animate__fadeOut");
+    const [cartCountPtoParent,setCartCountPtoParent] = useState(cartCountP);
 
     // display and hide success modal
     const showSuccessModal = () => {
@@ -19,6 +20,7 @@ function OurProducts(props) {
             // setDisplay("block");
             setShow(true);
             setFade("animate__fadeIn");
+            setCartCountPtoParent(cartCountPtoParent + 1);
         } else {
             //console.log("display block / " + show);
             setFade("animate__fadeOut");
@@ -30,12 +32,13 @@ function OurProducts(props) {
     
     useEffect(() => {
         //setData(props.myData);
-        if(props != null){
-            setData(props.myData);
+       
+        if(myDataP != null){
+            setData(myDataP);
         }else{
             console.log("props empty");
         }
-    },[props]);
+    },[myDataP]);
 
     const handleData = () =>{
         return(
@@ -77,9 +80,12 @@ function OurProducts(props) {
         
     }
    
+    parentCallBackP(cartCountPtoParent);
+
     return (
         
         <>
+            { console.log(cartCountPtoParent) }
             <div className="container border-header">
                 <h2>Our Products</h2>
                 <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
