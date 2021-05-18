@@ -13,13 +13,6 @@ function Home(props) {
 
   const [myData, setmyData] = useState();
   const [cartCount, setCartCount] = useState(props.cartCounApp);
-  // if(props.cartCountApp != null){
-  //   setCartCount(props.cartCountApp);
-  // }else{
-  //   console.log("props == null");
-  // }
-  
-  // const basket = <Basket cartCountP={cartCount} />;
   
 
   const getData = () => {
@@ -34,7 +27,6 @@ function Home(props) {
   
   useEffect(() => {
     getData();
-    // setCartCount(cartCountApp);
   },[]);
 
   
@@ -44,8 +36,8 @@ function Home(props) {
         setCartCount(childData);
      }
   
-
-  props.parentCallBackApp(cartCount);
+     //function handling data to send it to Parent(App)
+    props.parentCallBackApp(cartCount);
  
 
     return (

@@ -20,7 +20,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* {console.log(cartCount)} */}
         <Switch>
           <Route path="/login">
             Login
