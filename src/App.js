@@ -1,4 +1,5 @@
 import './App.css';
+import {useState} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,26 +10,26 @@ import Basket from "./components/Basket";
 
 function App() {
 
-  // fetch('localhost:5000/products')
-  // .then(res => {
-  //   console.log(res);
-  // })
-  // .catch(err => {
-  //   console.log(err);
-  // });
+  const [cartCount, setCartCount] = useState(0);
+
+    // callback function to handle data from childs
+    const handleCallback = (childData) =>{
+      setCartCount(childData);
+  }
 
   return (
     <Router>
       <div className="App">
+        {/* {console.log(cartCount)} */}
         <Switch>
           <Route path="/login">
             Login
           </Route>
           <Route path="/basket">
-            <Basket/>
+            <Basket cartCounApp={cartCount} parentCallBackApp={handleCallback}/>
           </Route>
           <Route path="/">
-            <Home/>
+            <Home cartCounApp={cartCount} parentCallBackApp={handleCallback}/>
           </Route>
         </Switch>
         

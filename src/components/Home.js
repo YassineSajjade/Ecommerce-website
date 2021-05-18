@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react';
+
 import Navbar from "./Navbar";
 import GridSearche from "./GridSearch";
 import OurProducts from "./OurProducts";
@@ -7,10 +8,19 @@ import Footer from "./Footer";
 
 
 
-function Home() {
+
+function Home(props) {
 
   const [myData, setmyData] = useState();
-  const [cartCount, setCartCount] = useState(0);
+  const [cartCount, setCartCount] = useState(props.cartCounApp);
+  // if(props.cartCountApp != null){
+  //   setCartCount(props.cartCountApp);
+  // }else{
+  //   console.log("props == null");
+  // }
+  
+  // const basket = <Basket cartCountP={cartCount} />;
+  
 
   const getData = () => {
     fetch('http://localhost:5000/products')
@@ -24,15 +34,19 @@ function Home() {
   
   useEffect(() => {
     getData();
+    // setCartCount(cartCountApp);
   },[]);
 
-  // callback function to handle data from childs
-  const handleCallback = (childData) =>{
-    setCartCount(childData);
-}
+  
 
+      // callback function to handle data from childs
+      const handleCallback = (childData) =>{
+        setCartCount(childData);
+     }
   
-  
+
+  props.parentCallBackApp(cartCount);
+ 
 
     return (
         <>

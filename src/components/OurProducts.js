@@ -36,7 +36,7 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
         if(myDataP != null){
             setData(myDataP);
         }else{
-            console.log("props empty");
+            console.log("myData empty");
         }
     },[myDataP]);
 
@@ -85,7 +85,7 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
     return (
         
         <>
-            { console.log(cartCountPtoParent) }
+            
             <div className="container border-header">
                 <h2>Our Products</h2>
                 <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>

@@ -9,6 +9,7 @@ function Navbar({cartCountP}) {
     const [shopDrop, setShopDropDown] = useState("none");
     const [display, setDisplay] = useState("none");
     const [scroll, setScroll] = useState(false);
+   
     
 
     const showMenu = () => {
@@ -41,7 +42,6 @@ function Navbar({cartCountP}) {
             setScroll(false);
         }
     }
-
     
 
     useEffect(() => {
@@ -50,6 +50,8 @@ function Navbar({cartCountP}) {
             window.removeEventListener('scroll', handleScroll);
         }
     });
+
+    
 
     //const active = scroll ? "navbar fixed-top navbar-expand-lg navbar-light bg-light" : "navbar navbar-expand-lg navbar-light bg-light" ;
     const active = scroll ? "fixed-top " : "";

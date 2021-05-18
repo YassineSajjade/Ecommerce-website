@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from "react-router-dom";
 import "./Basket.css";
 import Navbar from "./Navbar";
@@ -8,10 +8,13 @@ import SupportBlock from './SupportBlock';
 import Footer from './Footer';
 
 
-function Basket() {
+function Basket(props) {
+
+    const [cartCount, setCartCount] = useState(props.cartCounApp);
+
     return (
         <>
-          <Navbar/>  
+          <Navbar cartCountP={cartCount}/>  
           <div className="cart-header">
               <h1>Your shooping cart</h1>
               <Link to="/">Home</Link>
