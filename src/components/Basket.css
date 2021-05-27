@@ -386,6 +386,7 @@ form .two-thirds .btn-actions .btn:hover{
 
 form .two-thirds .btn-actions a.btn{
     -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
 }
 
 /********************************************** 1 Thrid  ******************************************/
