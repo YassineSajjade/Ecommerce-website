@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import "./OurProducts.css";
+import './ModalSuccess';
+import ModalSuccess from './ModalSuccess';
 
 function OurProducts({myDataP, cartCountP, parentCallBackP}) {
 
@@ -11,6 +13,10 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
     const [show,setShow] = useState(false);
     const [fade,setFade] = useState("animate__fadeOut");
     const [cartCountPtoParent,setCartCountPtoParent] = useState(cartCountP);
+
+    //states of data passing to the Modal
+    const [name,setName] = useState('unvaliable');
+    const [price,setPrice] = useState('unvaliable');
 
     // display and hide success modal
     const showSuccessModal = () => {
@@ -55,7 +61,7 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
                             <div className="item-product-body">
                                 <Link to="#">{item.name}</Link>
                                 <span>${item.prix}</span>
-                                <Link className="btn" to="#">Add To Cart</Link>
+                                <Link className="btn" to="#" onClick={showSuccessModal}>Add To Cart</Link>
                             </div>
                         </div>
                     </li>
@@ -136,7 +142,7 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
             {/* list of products */}
             <div className="container-products" style={{marginTop:"30px"}}>
                 <ul className="list-products">
-                    <li className="item-product" >
+                    {/* <li className="item-product" >
                         <div>
                             <div className="item-product-header">
                                 <Link to="#">
@@ -177,10 +183,10 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
                                 <Link className="btn" to="#">Add To Cart</Link>
                             </div>
                         </div>
-                    </li>
-                    {/* {
+                    </li> */}
+                    {
                         handleData()
-                    }               */}
+                    }              
                 </ul>
             </div>
             {/* end list of products */}
@@ -190,49 +196,7 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
             {/* end loading-modal */}
 
             {/* success-modal */}
-            <div className={`success-modal modale animate__animated ${fade} `}  style={{visibility: display}}>
-                <div className="overlay"></div>
-                <div className="content">
-
-                    <div className="modal-left">
-                        <p className="added-to-cart info">Product successfully added to your shopping cart</p>
-                        <img className="product-image" src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt="modal window" />
-                        <div className="cart-desc">
-                            <h3 className="product-title">Watermelon</h3>
-                            <span className="price">$100.00</span>
-                            <p>
-                                Qty:
-                                <span className="qty"> 1</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="modal-right">
-                        <p>
-                            There are
-                            <span className="cartCount"> 1 </span>
-                            item(s) in your cart
-                        </p>
-                        <span className="cartTotal">
-                            <span className="mooney">$100.00</span>
-                        </span>
-                        <button className="btn continue-shopping">
-                            <Link to="/" onClick={showSuccessModal}>Continue Shopping</Link>
-                        </button>
-                        <div className="success-message added-to-cart">
-                            <Link to="/basket" className="btn">
-                                <i className="fas fa-shopping-cart"></i>
-                                View Cart
-                            </Link>
-                        </div>
-                    </div>
-
-                    <a className="close-modal">
-                        <i className="far fa-times-circle" onClick={showSuccessModal}></i>
-                    </a>
-
-                </div>
-            </div>
+            <ModalSuccess fadeP={fade} displayP={display} showSuccessModalP={showSuccessModal} nameP={name} priceP={price} />
             {/* end success-modal */}
 
             {/* error-modal */}
