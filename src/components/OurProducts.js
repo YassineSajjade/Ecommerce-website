@@ -16,10 +16,12 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
 
     //states of data passing to the Modal
     const [name,setName] = useState('unvaliable');
-    const [price,setPrice] = useState('unvaliable');
+    const [price,setPrice] = useState(0);
+    const [totalPrice,setTotalPrice] = useState(0);
+    const [photo,setPhoto] = useState('');
 
     // display and hide success modal
-    const showSuccessModal = () => {
+    const showSuccessModal = (value) => {
         if (!show) {
             //console.log("display none / " + show);
             setDisplay("visible");
@@ -27,6 +29,11 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
             setShow(true);
             setFade("animate__fadeIn");
             setCartCountPtoParent(cartCountPtoParent + 1);
+            setName(value.name);
+            setPrice(value.prix);
+            setPhoto(value.photo);
+            setTotalPrice(value.prix + totalPrice);
+            console.log(value);
         } else {
             //console.log("display block / " + show);
             setFade("animate__fadeOut");
@@ -61,7 +68,7 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
                             <div className="item-product-body">
                                 <Link to="#">{item.name}</Link>
                                 <span>${item.prix}</span>
-                                <Link className="btn" to="#" onClick={showSuccessModal}>Add To Cart</Link>
+                                <Link className="btn" to="#" onClick={() => showSuccessModal(item)}>Add To Cart</Link>
                             </div>
                         </div>
                     </li>
@@ -196,7 +203,7 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
             {/* end loading-modal */}
 
             {/* success-modal */}
-            <ModalSuccess fadeP={fade} displayP={display} showSuccessModalP={showSuccessModal} nameP={name} priceP={price} />
+            <ModalSuccess fadeP={fade} displayP={display} showSuccessModalP={showSuccessModal} nameP={name} priceP={price} photoP={photo} cartCountP={cartCountPtoParent} totalPriceP={totalPrice}/>
             {/* end success-modal */}
 
             {/* error-modal */}

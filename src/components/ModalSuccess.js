@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-function ModalSuccess({fadeP, displayP, showSuccessModalP, nameP, priceP}) {
+function ModalSuccess({fadeP, displayP, showSuccessModalP, nameP, priceP, photoP, cartCountP, totalPriceP}) {
     return (
         <div className={`success-modal modale animate__animated ${fadeP} `}  style={{visibility: displayP}}>
                 <div className="overlay"></div>
@@ -9,7 +9,7 @@ function ModalSuccess({fadeP, displayP, showSuccessModalP, nameP, priceP}) {
 
                     <div className="modal-left">
                         <p className="added-to-cart info">Product successfully added to your shopping cart</p>
-                        <img className="product-image" src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-1.png?v=1583912659" alt="modal window" />
+                        <img className="product-image" src={`${photoP}`} alt="modal window" />
                         <div className="cart-desc">
                             <h3 className="product-title">{nameP}</h3>
                             <span className="price">${priceP}</span>
@@ -23,11 +23,11 @@ function ModalSuccess({fadeP, displayP, showSuccessModalP, nameP, priceP}) {
                     <div className="modal-right">
                         <p>
                             There are
-                            <span className="cartCount"> 1 </span>
+                            <span className="cartCount"> {cartCountP} </span>
                             item(s) in your cart
                         </p>
                         <span className="cartTotal">
-                            <span className="mooney">$100.00</span>
+                            <span className="mooney">${totalPriceP}</span>
                         </span>
                         <button className="btn continue-shopping">
                             <Link to="/" onClick={showSuccessModalP}>Continue Shopping</Link>
