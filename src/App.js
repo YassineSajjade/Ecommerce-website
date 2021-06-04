@@ -11,10 +11,12 @@ import Basket from "./components/Basket";
 function App() {
 
   const [cartCount, setCartCount] = useState(0);
+  const [dataToCart, setDataToCart] = useState([]);
 
     // callback function to handle data from childs
-    const handleCallback = (childData) =>{
-      setCartCount(childData);
+    const handleCallback = (cartCount, prdToCartO) =>{
+      setCartCount(cartCount);
+      setDataToCart(prdToCartO);
   }
 
   return (

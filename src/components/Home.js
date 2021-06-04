@@ -13,6 +13,7 @@ function Home(props) {
 
   const [myData, setmyData] = useState();
   const [cartCount, setCartCount] = useState(props.cartCounApp);
+  const [prdToCartO, setPrdToCartO] = useState([]);
   
 
   const getData = () => {
@@ -32,12 +33,13 @@ function Home(props) {
   
 
       // callback function to handle data from childs
-      const handleCallback = (childData) =>{
-        setCartCount(childData);
+      const handleCallback = (cartCountPtoParent,prdToCart) =>{
+        setCartCount(cartCountPtoParent);
+        setPrdToCartO(prdToCart);
      }
   
      //function handling data to send it to Parent(App)
-    props.parentCallBackApp(cartCount);
+    props.parentCallBackApp(cartCount, prdToCartO);
  
 
     return (

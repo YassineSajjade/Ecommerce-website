@@ -7,6 +7,7 @@ import ModalSuccess from './ModalSuccess';
 function OurProducts({myDataP, cartCountP, parentCallBackP}) {
 
     const [myData, setData] = useState([]);
+    const [prdToCart, setPrdToCart] = useState([]);
 
     // const [display,setDisplay] = useState("none");
     const [display,setDisplay] = useState("hidden");
@@ -19,7 +20,6 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
     const [price,setPrice] = useState(0);
     const [totalPrice,setTotalPrice] = useState(0);
     const [photo,setPhoto] = useState('');
-
     // display and hide success modal
     const showSuccessModal = (value) => {
         if (!show) {
@@ -33,7 +33,7 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
             setPrice(value.prix);
             setPhoto(value.photo);
             setTotalPrice(value.prix + totalPrice);
-            console.log(value);
+            setPrdToCart(prdToCart => [...prdToCart, value]);
         } else {
             //console.log("display block / " + show);
             setFade("animate__fadeOut");
@@ -93,7 +93,7 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
         
     }
    
-    parentCallBackP(cartCountPtoParent);
+    parentCallBackP(cartCountPtoParent, prdToCart);
 
     return (
         
