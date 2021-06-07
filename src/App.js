@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,12 +12,21 @@ function App() {
 
   const [cartCount, setCartCount] = useState(0);
   const [dataToCart, setDataToCart] = useState([]);
+  // const [dataFromCart, setDataFromCart] = useState([]);
 
     // callback function to handle data from childs
     const handleCallback = (cartCount, prdToCartO) =>{
       setCartCount(cartCount);
       setDataToCart(prdToCartO);
-  }
+      // setDataFromCart(dataShopToApp);
+    }
+   
+
+//   const handleCallbackForCart = (dataShop) =>{
+//     setDataToCart(dataShop);
+// }
+
+  
 
   return (
     <Router>
@@ -27,7 +36,7 @@ function App() {
             Login
           </Route>
           <Route path="/basket">
-            <Basket cartCounApp={cartCount} parentCallBackApp={handleCallback}/>
+            <Basket cartCounApp={cartCount} parentCallBackApp={handleCallback} dataToCartP={dataToCart} />
           </Route>
           <Route path="/">
             <Home cartCounApp={cartCount} parentCallBackApp={handleCallback}/>
