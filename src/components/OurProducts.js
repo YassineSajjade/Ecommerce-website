@@ -1,31 +1,33 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import "./OurProducts.css";
 import './ModalSuccess';
 import ModalSuccess from './ModalSuccess';
+import { DataContext } from '../App';
 
-function OurProducts({myDataP, cartCountP, parentCallBackP}) {
+function OurProducts({parentCallBackP}) {
 
-    const [myData, setData] = useState([]);
-    const [prdToCart, setPrdToCart] = useState([]);
+    //context data
+    const value = useContext(DataContext);
 
-    // const [display,setDisplay] = useState("none");
+    // const [prdToCart, setPrdToCart] = useState([]);
+
+    // 
     const [display,setDisplay] = useState("hidden");
     const [show,setShow] = useState(false);
     const [fade,setFade] = useState("animate__fadeOut");
-    const [cartCountPtoParent,setCartCountPtoParent] = useState(cartCountP);
+    const [cartCountPtoParent,setCartCountPtoParent] = useState(value.cartCount);
 
     //states of data passing to the Modal
     const [name,setName] = useState('unvaliable');
     const [price,setPrice] = useState(0);
     const [totalPrice,setTotalPrice] = useState(0);
     const [photo,setPhoto] = useState('');
+
     // display and hide success modal
     const showSuccessModal = (value) => {
         if (!show) {
-            //console.log("display none / " + show);
             setDisplay("visible");
-            // setDisplay("block");
             setShow(true);
             setFade("animate__fadeIn");
             setCartCountPtoParent(cartCountPtoParent + 1);
@@ -33,30 +35,19 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
             setPrice(value.prix);
             setPhoto(value.photo);
             setTotalPrice(value.prix + totalPrice);
-            setPrdToCart(prdToCart => [...prdToCart,value]);
+            // setPrdToCart(prdToCart => [...prdToCart,value]);
         } else {
-            //console.log("display block / " + show);
             setFade("animate__fadeOut");
             setDisplay("hidden");
-            // setDisplay("none");
             setShow(false);
         }
     }
     
-    useEffect(() => {
-        //setData(props.myData);
-       
-        if(myDataP != null){
-            setData(myDataP);
-        }else{
-            console.log("myData empty");
-        }
-    },[myDataP]);
 
     const handleData = () =>{
         return(
-            myData != null 
-            ? myData.map( (item, index) => {
+            value.myData != null 
+            ? value.myData.map( (item, index) => {
                 return (
                     <li className="item-product" key={index}>
                         <div>
@@ -93,7 +84,7 @@ function OurProducts({myDataP, cartCountP, parentCallBackP}) {
         
     }
    
-    parentCallBackP(cartCountPtoParent, prdToCart);
+    parentCallBackP(cartCountPtoParent);
 
     return (
         

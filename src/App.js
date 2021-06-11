@@ -1,5 +1,5 @@
 import './App.css';
-import {useEffect, useState} from 'react';
+import {useEffect, useState, createContext} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,39 +8,52 @@ import {
 import Home from "./components/Home";
 import Basket from "./components/Basket";
 
+export const DataContext = createContext();
+
 function App() {
 
+  const [myData, setmyData] = useState([]);
   const [cartCount, setCartCount] = useState(0);
   const [dataToCart, setDataToCart] = useState([]);
   // const [dataFromCart, setDataFromCart] = useState([]);
+
+  //Fetch data in Back-end
+  const getData = () => {
+    fetch('http://localhost:5000/products')
+    .then(res => res.json())
+    .then(data => {
+      setmyData(data.products);
+    })
+    .catch(err => console.log(err));
+  }
+
+  
+  useEffect(() => {
+    getData();
+  },[]);
 
     // callback function to handle data from childs
     const handleCallback = (cartCount, prdToCartO) =>{
       setCartCount(cartCount);
       setDataToCart(prdToCartO);
-      // setDataFromCart(dataShopToApp);
     }
-   
-
-//   const handleCallbackForCart = (dataShop) =>{
-//     setDataToCart(dataShop);
-// }
-
   
 
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/login">
-            Login
-          </Route>
-          <Route path="/basket">
-            <Basket cartCounApp={cartCount} parentCallBackApp={handleCallback} dataToCartP={dataToCart} />
-          </Route>
-          <Route path="/">
-            <Home cartCounApp={cartCount} parentCallBackApp={handleCallback}/>
-          </Route>
+          <DataContext.Provider value={{myData:myData, cartCount:cartCount}}>
+            <Route path="/login">
+              Login
+            </Route>
+            <Route path="/basket">
+              <Basket parentCallBackApp={handleCallback} dataToCartP={dataToCart} />
+            </Route>
+            <Route path="/">
+              <Home parentCallBackApp={handleCallback}/>
+            </Route>
+          </DataContext.Provider>
         </Switch>
         
       </div>

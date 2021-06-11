@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { DataContext } from '../App';
 
-function Navbar({cartCountP}) {
+function Navbar() {
+
+    const value = useContext(DataContext);
 
     const [show, setShow] = useState(false);
     const [shop, setShop] = useState(false);
@@ -10,7 +13,7 @@ function Navbar({cartCountP}) {
     const [display, setDisplay] = useState("none");
     const [scroll, setScroll] = useState(false);
    
-    
+    const active = scroll ? "fixed-top " : "";
 
     const showMenu = () => {
         if (!show) {
@@ -50,12 +53,6 @@ function Navbar({cartCountP}) {
             window.removeEventListener('scroll', handleScroll);
         }
     });
-
-    
-
-    //const active = scroll ? "navbar fixed-top navbar-expand-lg navbar-light bg-light" : "navbar navbar-expand-lg navbar-light bg-light" ;
-    const active = scroll ? "fixed-top " : "";
-
 
 
     return (
@@ -374,7 +371,7 @@ function Navbar({cartCountP}) {
                                     <Link to="/basket">
                                         <i className="fas fa-shopping-basket" style={{color:"#28a745"}}></i>
                                         <div className="detail">
-                                            <div id="cartCount">{cartCountP}</div>
+                                            <div id="cartCount">{value.cartCount}</div>
                                         </div>
                                     </Link>
                                     <div id="slidedown-cart" style={{overflow: "hidden", display: "none"}}>
