@@ -7,30 +7,32 @@ import { DataContext } from '../App';
 
 function OurProducts({parentCallBackP}) {
 
-    //context data
-    const value = useContext(DataContext);
+        //get context data
+    const contextValue = useContext(DataContext);
 
     // const [prdToCart, setPrdToCart] = useState([]);
 
-    // 
+        // some state to handle modal //
     const [display,setDisplay] = useState("hidden");
     const [show,setShow] = useState(false);
     const [fade,setFade] = useState("animate__fadeOut");
-    const [cartCountPtoParent,setCartCountPtoParent] = useState(value.cartCount);
+    //const [cartCountPtoParent,setCartCountPtoParent] = useState();
+    // const [cartCountPtoParent,setCartCountPtoParent] = useState(value.cartCount);
 
-    //states of data passing to the Modal
-    const [name,setName] = useState('unvaliable');
+        //states of data passing to the Modal //
+    const [name,setName] = useState('unavailable');
     const [price,setPrice] = useState(0);
     const [totalPrice,setTotalPrice] = useState(0);
     const [photo,setPhoto] = useState('');
 
-    // display and hide success modal
+        // function to show and hide success modal //
     const showSuccessModal = (value) => {
         if (!show) {
             setDisplay("visible");
             setShow(true);
             setFade("animate__fadeIn");
-            setCartCountPtoParent(cartCountPtoParent + 1);
+            //setCartCountPtoParent(cartCountPtoParent + 1);
+            contextValue.toggleCartCount() ;
             setName(value.name);
             setPrice(value.prix);
             setPhoto(value.photo);
@@ -44,10 +46,11 @@ function OurProducts({parentCallBackP}) {
     }
     
 
+        //function to handle data from context (myData)
     const handleData = () =>{
         return(
-            value.myData != null 
-            ? value.myData.map( (item, index) => {
+            contextValue.myData != null 
+            ? contextValue.myData.map( (item, index) => {
                 return (
                     <li className="item-product" key={index}>
                         <div>
@@ -84,12 +87,11 @@ function OurProducts({parentCallBackP}) {
         
     }
    
-    parentCallBackP(cartCountPtoParent);
+    // parentCallBackP(cartCountPtoParent);
 
     return (
         
         <>
-            
             <div className="container border-header">
                 <h2>Our Products</h2>
                 <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
@@ -140,9 +142,7 @@ function OurProducts({parentCallBackP}) {
             {/* list of products */}
             <div className="container-products" style={{marginTop:"30px"}}>
                 <ul className="list-products">
-                    {
-                        handleData()
-                    }              
+                    { handleData() }              
                 </ul>
             </div>
             {/* end list of products */}
@@ -152,7 +152,7 @@ function OurProducts({parentCallBackP}) {
             {/* end loading-modal */}
 
             {/* success-modal */}
-            <ModalSuccess fadeP={fade} displayP={display} showSuccessModalP={showSuccessModal} nameP={name} priceP={price} photoP={photo} cartCountP={cartCountPtoParent} totalPriceP={totalPrice}/>
+            <ModalSuccess fadeP={fade} displayP={display} showSuccessModalP={showSuccessModal} nameP={name} priceP={price} photoP={photo} totalPriceP={totalPrice}/>
             {/* end success-modal */}
 
             {/* error-modal */}

@@ -5,27 +5,35 @@ import { DataContext } from '../App';
 
 function Navbar() {
 
+        //get context data
     const value = useContext(DataContext);
 
+        //states to handle mobile menu
     const [show, setShow] = useState(false);
+    const [display, setDisplay] = useState("none");
+
+        //states to handle dropDown menu of 'Shop'
     const [shop, setShop] = useState(false);
     const [shopDrop, setShopDropDown] = useState("none");
-    const [display, setDisplay] = useState("none");
+    
+        //state of Scroll
     const [scroll, setScroll] = useState(false);
    
+        //Variable for fix the navbar at top
     const active = scroll ? "fixed-top " : "";
 
+        // function to handle mobile meni
     const showMenu = () => {
         if (!show) {
-            // console.log("display none / " + show);
             setDisplay("block");
             setShow(true)
         } else {
-            // console.log("display block / " + show);
             setDisplay("none");
             setShow(false);
         }
     }
+
+        //function to handle drop down menu of 'Shop'
     const shopDropDown = () =>{
         if(!shop){
             setShopDropDown("block");
@@ -36,17 +44,17 @@ function Navbar() {
         }
     }
 
+        //Function to handle scroll
     const handleScroll = () => {
         const offset = window.scrollY;
         if (offset > 70) {
-            // console.log(offset);
             setScroll(true);
         } else {
             setScroll(false);
         }
     }
     
-
+        //React Effect
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {
@@ -371,6 +379,7 @@ function Navbar() {
                                     <Link to="/basket">
                                         <i className="fas fa-shopping-basket" style={{color:"#28a745"}}></i>
                                         <div className="detail">
+                                            {/* <div id="cartCount">{value.cartCount}</div> */}
                                             <div id="cartCount">{value.cartCount}</div>
                                         </div>
                                     </Link>

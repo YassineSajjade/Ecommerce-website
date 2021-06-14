@@ -12,9 +12,10 @@ export const DataContext = createContext();
 
 function App() {
 
-  const [myData, setmyData] = useState([]);
-  const [cartCount, setCartCount] = useState(0);
-  const [dataToCart, setDataToCart] = useState([]);
+  
+  const [myData, setmyData] = useState([]); //=> Array for store my data from Back-end
+  const [cartCount, setCartCount] = useState(0);  //=>  cart count for basket 
+  // const [dataToCart, setDataToCart] = useState([]);
   // const [dataFromCart, setDataFromCart] = useState([]);
 
   //Fetch data in Back-end
@@ -27,35 +28,42 @@ function App() {
     .catch(err => console.log(err));
   }
 
-  
+  const toggleCartCount = () => {
+    setCartCount(cartCount + 1);
+  }
+
+    //Execute getData function
   useEffect(() => {
     getData();
   },[]);
 
     // callback function to handle data from childs
-    const handleCallback = (cartCount, prdToCartO) =>{
-      setCartCount(cartCount);
-      setDataToCart(prdToCartO);
-    }
+    // const handleCallback = (cartCount, prdToCartO) =>{
+    //   setCartCount(cartCount);
+    //   setDataToCart(prdToCartO);
+    // }
   
 
   return (
     <Router>
       <div className="App">
+      <DataContext.Provider value={{myData:myData, cartCount:cartCount, toggleCartCount:toggleCartCount}}>
         <Switch>
-          <DataContext.Provider value={{myData:myData, cartCount:cartCount}}>
+          
             <Route path="/login">
               Login
             </Route>
             <Route path="/basket">
-              <Basket parentCallBackApp={handleCallback} dataToCartP={dataToCart} />
+              <Basket/>
+              {/* <Basket parentCallBackApp={handleCallback} dataToCartP={dataToCart} /> */}
             </Route>
             <Route path="/">
-              <Home parentCallBackApp={handleCallback}/>
+              <Home/>
+              {/* <Home parentCallBackApp={handleCallback}/> */}
             </Route>
-          </DataContext.Provider>
+          
         </Switch>
-        
+        </DataContext.Provider>
       </div>
     </Router>
 

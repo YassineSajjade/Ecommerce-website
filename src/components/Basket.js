@@ -10,82 +10,83 @@ import Footer from './Footer';
 
 function Basket(props) {
 
-    const [cartCount, setCartCount] = useState(props.cartCounApp); // => 0
+    //const [cartCount, setCartCount] = useState(props.cartCounApp); // => 0
     const [dataShop, setDataShop] = useState(props.dataToCartP);   // = Array of data from App 
-    const [dataShopToApp, setDataShopToApp] = useState('test');    // = Array of data to App 
+    //const [dataShopToApp, setDataShopToApp] = useState('test');    // = Array of data to App 
 
     // useEffect(() => {
     //     setDataShopToApp(dataShop);
     // }, [dataShop])
 
-    const handleDataShop = () => {
-        return (
-            dataShop.map((item, index) => {
-                return (
-                    <div className="cart-row" key={index}>
-                        <div className="grid-full cart-row-table-large text-center">
-                            <div className="grid grid__item cart-items wide--two-tenths">
-                                <Link className="cart-image" to="#">
-                                    <img src={item.photo} alt="" />
-                                </Link>
-                            </div>
+    // const handleDataShop = () => {
+    //     return (
+    //         dataShop.map((item, index) => {
+    //             return (
+    //                 <div className="cart-row" key={index}>
+    //                     <div className="grid-full cart-row-table-large text-center">
+    //                         <div className="grid grid__item cart-items wide--two-tenths">
+    //                             <Link className="cart-image" to="#">
+    //                                 <img src={item.photo} alt="" />
+    //                             </Link>
+    //                         </div>
 
-                            <div className="grid grid__item product-infos text-left wide--eight-tenths">
+    //                         <div className="grid grid__item product-infos text-left wide--eight-tenths">
 
-                                {/* 1 */}
-                                <div className="grid__item cart-title" >
-                                    <Link className="product-name" to="#">{item.name}</Link>
-                                    <br />
-                                    {/* <small>3 kg / blue</small> */}
-                                </div>
+    //                             {/* 1 */}
+    //                             <div className="grid__item cart-title" >
+    //                                 <Link className="product-name" to="#">{item.name}</Link>
+    //                                 <br />
+    //                                 {/* <small>3 kg / blue</small> */}
+    //                             </div>
 
-                                {/* 2 */}
-                                <div className="grid__item" >
-                                    <span className="price h5">
-                                        <span className="money">${item.prix}</span>
-                                    </span>
-                                </div>
+    //                             {/* 2 */}
+    //                             <div className="grid__item" >
+    //                                 <span className="price h5">
+    //                                     <span className="money">${item.prix}</span>
+    //                                 </span>
+    //                             </div>
 
-                                {/* 3 */}
-                                <div className="grid__item" >
-                                    <div className="qty-box-set">
-                                        <input className="qtyminus1" type="button" value="-" />
-                                        <input className="quantity-selector cart-number" type="number" value="1" min="0" />
-                                        <input className="qtyplus1" type="button" value="+" />
-                                    </div>
-                                </div>
+    //                             {/* 3 */}
+    //                             <div className="grid__item" >
+    //                                 <div className="qty-box-set">
+    //                                     <input className="qtyminus1" type="button" value="-" />
+    //                                     <input className="quantity-selector cart-number" type="number" value="1" min="0" />
+    //                                     <input className="qtyplus1" type="button" value="+" />
+    //                                 </div>
+    //                             </div>
 
-                                {/* 4 */}
-                                <div className="grid__item" >
-                                    <span className="cart-total">Total:</span>
-                                    <span className="h5" style={{ marginLeft: "5px" }} >
-                                        <span className="money">${item.prix}</span>
-                                    </span>
-                                </div>
+    //                             {/* 4 */}
+    //                             <div className="grid__item" >
+    //                                 <span className="cart-total">Total:</span>
+    //                                 <span className="h5" style={{ marginLeft: "5px" }} >
+    //                                     <span className="money">${item.prix}</span>
+    //                                 </span>
+    //                             </div>
 
-                                {/* 5 */}
-                                <div className="grid__item" >
-                                    <Link className="cart-remove" to="#">
-                                        <span>
-                                            <i className="fas fa-times"></i>
-                                        </span>
-                                    </Link>
-                                </div>
+    //                             {/* 5 */}
+    //                             <div className="grid__item" >
+    //                                 <Link className="cart-remove" to="#">
+    //                                     <span>
+    //                                         <i className="fas fa-times"></i>
+    //                                     </span>
+    //                                 </Link>
+    //                             </div>
 
-                            </div>
-                        </div>
-                    </div>
+    //                         </div>
+    //                     </div>
+    //                 </div>
 
-                )
-            })
-        )
-    }
+    //             )
+    //         })
+    //     )
+    // }
 
-    props.parentCallBackApp(cartCount);
+    // props.parentCallBackApp(cartCount);
 
     return (
         <>
-            <Navbar cartCountP={cartCount} />
+            {/* <Navbar cartCountP={cartCount} /> */}
+            <Navbar/>
             <div className="cart-header">
                 <h1>Your shooping cart</h1>
                 <Link to="/">Home</Link>
@@ -130,7 +131,7 @@ function Basket(props) {
 
                                         {/* cart row */}
                                         
-                                        {handleDataShop()}
+                                        {/* {handleDataShop()} */}
 
                                         {/* buttons actions */}
                                         <div className="btn-actions">
