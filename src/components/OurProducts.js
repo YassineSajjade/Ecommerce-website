@@ -5,25 +5,21 @@ import './ModalSuccess';
 import ModalSuccess from './ModalSuccess';
 import { DataContext } from '../App';
 
-function OurProducts({parentCallBackP}) {
+function OurProducts() {
 
         //get context data
     const contextValue = useContext(DataContext);
-
-    // const [prdToCart, setPrdToCart] = useState([]);
 
         // some state to handle modal //
     const [display,setDisplay] = useState("hidden");
     const [show,setShow] = useState(false);
     const [fade,setFade] = useState("animate__fadeOut");
-    //const [cartCountPtoParent,setCartCountPtoParent] = useState();
-    // const [cartCountPtoParent,setCartCountPtoParent] = useState(value.cartCount);
 
         //states of data passing to the Modal //
-    const [name,setName] = useState('unavailable');
-    const [price,setPrice] = useState(0);
-    const [totalPrice,setTotalPrice] = useState(0);
-    const [photo,setPhoto] = useState('');
+    const [name,setName] = useState('unavailable'); //=> name of Produit
+    const [price,setPrice] = useState(0);           //=> price of Produit
+    //const [totalPrice,setTotalPrice] = useState(0); //=> total price of Produits
+    const [photo,setPhoto] = useState('');          //=> photo of produit
 
         // function to show and hide success modal //
     const showSuccessModal = (value) => {
@@ -31,13 +27,13 @@ function OurProducts({parentCallBackP}) {
             setDisplay("visible");
             setShow(true);
             setFade("animate__fadeIn");
-            //setCartCountPtoParent(cartCountPtoParent + 1);
             contextValue.toggleCartCount() ;
             setName(value.name);
             setPrice(value.prix);
             setPhoto(value.photo);
-            setTotalPrice(value.prix + totalPrice);
-            // setPrdToCart(prdToCart => [...prdToCart,value]);
+            //setTotalPrice(value.prix + totalPrice);
+            contextValue.toggleTotalPrice(value.prix);
+            contextValue.togglePrdToCart(value);
         } else {
             setFade("animate__fadeOut");
             setDisplay("hidden");
@@ -87,7 +83,6 @@ function OurProducts({parentCallBackP}) {
         
     }
    
-    // parentCallBackP(cartCountPtoParent);
 
     return (
         
@@ -152,7 +147,7 @@ function OurProducts({parentCallBackP}) {
             {/* end loading-modal */}
 
             {/* success-modal */}
-            <ModalSuccess fadeP={fade} displayP={display} showSuccessModalP={showSuccessModal} nameP={name} priceP={price} photoP={photo} totalPriceP={totalPrice}/>
+            <ModalSuccess fadeP={fade} displayP={display} showSuccessModalP={showSuccessModal} nameP={name} priceP={price} photoP={photo} />
             {/* end success-modal */}
 
             {/* error-modal */}

@@ -15,10 +15,10 @@ function App() {
   
   const [myData, setmyData] = useState([]); //=> Array for store my data from Back-end
   const [cartCount, setCartCount] = useState(0);  //=>  cart count for basket 
-  // const [dataToCart, setDataToCart] = useState([]);
-  // const [dataFromCart, setDataFromCart] = useState([]);
+  const [prdToCart, setPrdToCart] = useState([]); //=> Array to store dataProducts for basket
+  const [totalPrice, setTotalPrice] = useState(0); //=> Total of amount
 
-  //Fetch data in Back-end
+    //Fetch data in Back-end
   const getData = () => {
     fetch('http://localhost:5000/products')
     .then(res => res.json())
@@ -28,26 +28,34 @@ function App() {
     .catch(err => console.log(err));
   }
 
+    //function to handle cartCount using Context
   const toggleCartCount = () => {
     setCartCount(cartCount + 1);
+  }
+
+    //function to handle ProductsToCart using Context
+  const togglePrdToCart = (newData) => {
+    setPrdToCart(oldData => [...oldData,newData]);
+  }
+
+    //function to handle total of amount
+  const toggleTotalPrice = (newPrdPrice) =>{
+    setTotalPrice(totalPrice + newPrdPrice)
   }
 
     //Execute getData function
   useEffect(() => {
     getData();
   },[]);
-
-    // callback function to handle data from childs
-    // const handleCallback = (cartCount, prdToCartO) =>{
-    //   setCartCount(cartCount);
-    //   setDataToCart(prdToCartO);
-    // }
   
 
   return (
     <Router>
       <div className="App">
-      <DataContext.Provider value={{myData:myData, cartCount:cartCount, toggleCartCount:toggleCartCount}}>
+      <DataContext.Provider value={{myData:myData, 
+        cartCount:cartCount, toggleCartCount:toggleCartCount,  
+        togglePrdToCart:togglePrdToCart,  prdToCart:prdToCart,  
+        toggleTotalPrice:toggleTotalPrice,  totalPrice:totalPrice}}>
         <Switch>
           
             <Route path="/login">

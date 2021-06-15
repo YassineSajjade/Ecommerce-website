@@ -1,7 +1,11 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import {Link} from 'react-router-dom';
+import { DataContext } from '../App';
 
-function ModalSuccess({fadeP, displayP, showSuccessModalP, nameP, priceP, photoP, cartCountP, totalPriceP}) {
+function ModalSuccess({fadeP, displayP, showSuccessModalP, nameP, priceP, photoP}) {
+
+    const valueContext = useContext(DataContext);
+
     return (
         <div className={`success-modal modale animate__animated ${fadeP} `}  style={{visibility: displayP}}>
                 <div className="overlay"></div>
@@ -23,11 +27,11 @@ function ModalSuccess({fadeP, displayP, showSuccessModalP, nameP, priceP, photoP
                     <div className="modal-right">
                         <p>
                             There are
-                            <span className="cartCount"> {cartCountP} </span>
+                            <span className="cartCount"> {valueContext.cartCount} </span>
                             item(s) in your cart
                         </p>
                         <span className="cartTotal">
-                            <span className="mooney">${totalPriceP}</span>
+                            <span className="mooney">${valueContext.totalPrice}</span>
                         </span>
                         <button className="btn continue-shopping">
                             <Link to="/" onClick={showSuccessModalP}>Continue Shopping</Link>
