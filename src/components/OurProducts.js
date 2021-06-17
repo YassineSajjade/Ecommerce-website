@@ -53,11 +53,12 @@ function OurProducts() {
             setShowError(true);
             setFade("animate__fadeIn");
             setName(product.name);
-            setTimeout(()=>{
+            const timer = setTimeout(()=>{
                 setFade("animate__fadeOut");
                 setDisplayError("hidden");
                 setShowError(false);
             },3500);
+            return () => clearTimeout(timer);
         } 
     }
     
