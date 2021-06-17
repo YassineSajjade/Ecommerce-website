@@ -28,32 +28,32 @@ function App() {
     .catch(err => console.log(err));
   }
 
-    //function to handle cartCount using Context
+    //function to handle adding to cartCount using Context
   const toggleCartCount = () => {
     setCartCount(cartCount + 1);
   }
 
-    //function to handle cartCount using Context
+    //function to handle removing from cartCount using Context
   const toggleMinusCartCount = () => {
     setCartCount(cartCount - 1);
   }
 
-    //function to handle ProductsToCart using Context
+    //function to handle adding product to array ProductsToCart using Context
   const togglePrdToCart = (newData) => {
     setPrdToCart(oldData => [...oldData,newData]);
   }
 
-    //function to handle ProductsFromCart using Context
+    //function to handle updating the array ProductsFromCart using Context
   const togglePrdFromCart = (newArray) => {
     setPrdToCart(newArray);
   }
 
-    //function to handle total of amount
+    //function to handle adding productPrice to total of amount
   const toggleTotalPrice = (newPrdPrice) =>{
     setTotalPrice(totalPrice + newPrdPrice)
   }
 
-    //function to handle total of amount
+    //function to handle removing productPrice for total of amount
   const toggleMinusTotalPrice = (PrdPrice) =>{
     setTotalPrice(totalPrice - PrdPrice)
   }

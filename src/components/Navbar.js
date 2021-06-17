@@ -5,25 +5,25 @@ import { DataContext } from '../App';
 
 function Navbar() {
 
-        //get context data
+    //get context data
     const value = useContext(DataContext);
 
-        //states to handle mobile menu
+    //states to handle mobile menu
     const [show, setShow] = useState(false);
     const [display, setDisplay] = useState("none");
 
-        //states to handle dropDown menu of 'Shop'
+    //states to handle dropDown menu of 'Shop'
     const [shop, setShop] = useState(false);
     const [shopDrop, setShopDropDown] = useState("none");
-    
-        //state of Scroll
+
+    //state of Scroll
     const [scroll, setScroll] = useState(false);
-   
-        //Variable for fix the navbar at top
+
+    //Variable for fix the navbar at top
     const active = scroll ? "fixed-top " : "";
     const shadow = scroll ? " 0px 0px 5px 0px #adb5bd " : "";
 
-        // function to handle mobile meni
+    // function to handle mobile meni
     const showMenu = () => {
         if (!show) {
             setDisplay("block");
@@ -34,18 +34,18 @@ function Navbar() {
         }
     }
 
-        //function to handle drop down menu of 'Shop'
-    const shopDropDown = () =>{
-        if(!shop){
+    //function to handle drop down menu of 'Shop'
+    const shopDropDown = () => {
+        if (!shop) {
             setShopDropDown("block");
             setShop(true);
-        }else{
+        } else {
             setShopDropDown("none");
             setShop(false);
         }
     }
 
-        //Function to handle scroll
+    //Function to handle scroll
     const handleScroll = () => {
         const offset = window.scrollY;
         if (offset > 70) {
@@ -54,8 +54,75 @@ function Navbar() {
             setScroll(false);
         }
     }
+
+    //function handle items for littleBasketCart
+    const handleLittleBasketCart = () => {
+        return (
+            value.prdToCart.map((item, index) => {
+                return (
+                    <li className="item" key={index}>
+                        <Link className="product-image" to="#">
+                            <img src={item.photo} alt="" style={{ maxWidth: "100%", border: "0 none" }} />
+                        </Link>
+                        <div className="product-details">
+                            <a href="/" title="Remove this item" className="btn-remove">
+                                <span className="fas fa-times"></span>
+                            </a>
+                            <p className="product-name">
+                                <Link to="#">{item.name}</Link>
+                            </p>
+                            <div className="cart-collateral">
+                                1 x
+                                <span className="price">
+                                    <span className="mooney"> ${item.prix}</span>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                )
+            })
+        )
+    }
+
+    //Function handle littleBasketCart
+    const littleBasketCart = value.prdToCart.length > 0 ?
+        <div className="has-items">
+
+            <ul className="mini-products-list">
+               {handleLittleBasketCart()}
+            </ul>
+
+            <div className="summary">
+                <p className="total">
+                    <span className="label">Cart total :</span>
+                    <span className="price">
+                        <span className="mooney">${value.totalPrice}</span>
+                    </span>
+                </p>
+            </div>
+
+            <div className="actions">
+
+                <button className="btn">
+                    <i className="fas fa-check"></i>
+                    Check Out
+                </button>
+
+                <button className="btn text-cart" style={{ marginLeft: "5px" }}>
+                    <i className="fas fa-shopping-basket"></i>
+                    View Cart
+                </button>
+
+            </div>
+
+        </div> :
+        <div className="no-items">
+            <p>Your cart is currently empty!</p>
+        </div>;
+
     
-        //React Effect
+
+    //React Effect
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {
@@ -80,7 +147,7 @@ function Navbar() {
                             <Link className="navbar-link" to="#">Shop</Link>
                             <i className="fas fa-sort-down" onClick={shopDropDown}></i>
                             {/* nav-dropdown-hover */}
-                            <div className="nav-dropdown-mobile" style={{ display: shopDrop}}>
+                            <div className="nav-dropdown-mobile" style={{ display: shopDrop }}>
                                 <div className="container-fluid">
                                     <div className="row">
                                         <div className="col">
@@ -235,7 +302,7 @@ function Navbar() {
                 </div>
             </div>
             <div className="header">
-                <div className={`container-fluid ${active}`} style={{boxShadow: shadow}}>
+                <div className={`container-fluid ${active}`} style={{ boxShadow: shadow }}>
                     <nav className="navbar navbar-expand-lg navbar-light">
                         <Link className="nav-brand" to="/">Groc Store</Link>
 
@@ -341,8 +408,8 @@ function Navbar() {
                                                 <div className="col-5">
                                                     <div className="row">
                                                         <div className="col-6">
-                                                            <div className="row" style={{ marginBottom: "10px" }}><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-1_2000x.jpg?v=1585300878"alt="" style={{ width: "200px", height: "200px" }} /></Link></div>
-                                                            <div className="row"><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-2_2000x.jpg?v=1585300913"alt="" style={{ width: "200px", height: "200px" }} /></Link></div>
+                                                            <div className="row" style={{ marginBottom: "10px" }}><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-1_2000x.jpg?v=1585300878" alt="" style={{ width: "200px", height: "200px" }} /></Link></div>
+                                                            <div className="row"><Link to="#"><img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/files/menu-3-2_2000x.jpg?v=1585300913" alt="" style={{ width: "200px", height: "200px" }} /></Link></div>
                                                         </div>
                                                         <div className="col-6">
                                                             <div className="row">
@@ -378,107 +445,15 @@ function Navbar() {
                             <ul>
                                 <li id="liSlide">
                                     <Link to="/basket">
-                                        <i className="fas fa-shopping-basket" style={{color:"#28a745"}}></i>
+                                        <i className="fas fa-shopping-basket" style={{ color: "#28a745" }}></i>
                                         <div className="detail">
                                             {/* <div id="cartCount">{value.cartCount}</div> */}
                                             <div id="cartCount">{value.cartCount}</div>
                                         </div>
                                     </Link>
-                                    <div id="slidedown-cart" style={{overflow: "hidden", display: "none"}}>
-
-                                        <div className="no-items">
-                                            <p>Your cart is currently empty!</p>
-                                        </div>
-
-                                        <div className="has-items" style={{display: "none"}}>
-
-                                            <ul className="mini-products-list">
-                                                {/* <li className="item">
-                                                    <Link className="product-image" to="#">
-                                                        <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
-                                                    </Link>
-                                                    <div className="product-details">
-                                                        <a href="/" title="Remove this item" className="btn-remove">
-                                                            <span className="fas fa-times"></span>
-                                                        </a>
-                                                        <p className="product-name">
-                                                            <Link to="#">Coriander - 4 kg / Gold</Link>
-                                                        </p>
-                                                        <div className="cart-collateral">
-                                                            1 x
-                                                            <span className="price">
-                                                                <span className="mooney"> $ 400.00 USD</span>
-                                                            </span>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </li>
-                                                <li className="item">
-                                                    <Link className="product-image" to="#">
-                                                        <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
-                                                    </Link>
-                                                    <div className="product-details">
-                                                        <a href="/" title="Remove this item" className="btn-remove">
-                                                            <span className="fas fa-times"></span>
-                                                        </a>
-                                                        <p className="product-name">
-                                                            <Link to="#">Coriander - 4 kg / Gold</Link>
-                                                        </p>
-                                                        <div className="cart-collateral">
-                                                            1 x
-                                                            <span className="price">
-                                                                <span className="mooney"> $ 400.00 USD</span>
-                                                            </span>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </li>
-                                                <li className="item">
-                                                    <Link className="product-image" to="#">
-                                                        <img src="https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-3_small.png" alt="" style={{maxWidth: "100%",border: "0 none"}}/>
-                                                    </Link>
-                                                    <div className="product-details">
-                                                        <a href="/" title="Remove this item" className="btn-remove">
-                                                            <span className="fas fa-times"></span>
-                                                        </a>
-                                                        <p className="product-name">
-                                                            <Link to="#">Coriander - 4 kg / Gold</Link>
-                                                        </p>
-                                                        <div className="cart-collateral">
-                                                            1 x
-                                                            <span className="price">
-                                                                <span className="mooney"> $ 400.00 USD</span>
-                                                            </span>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </li> */}
-                                            </ul>
-
-                                            <div className="summary">
-                                                <p className="total">
-                                                    <span className="label">Cart total :</span>
-                                                    <span className="price">
-                                                        <span className="mooney">$ 500.00</span>
-                                                    </span>
-                                                </p>
-                                            </div>
-
-                                            <div className="actions">
-
-                                                <button className="btn">
-                                                    <i className="fas fa-check"></i>
-                                                    Check Out
-                                                </button>
-
-                                                <button className="btn text-cart" style={{marginLeft: "5px"}}>
-                                                    <i className="fas fa-shopping-basket"></i>
-                                                    View Cart
-                                                </button>
-
-                                            </div>
-
-                                        </div>
+                                    <div id="slidedown-cart" style={{ overflow: "hidden", display: "none" }}>
+                                        {/* Show littleBasketCart is emty OR had items */}
+                                        {littleBasketCart}
                                     </div>
                                 </li>
                                 <li>
