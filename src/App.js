@@ -33,14 +33,29 @@ function App() {
     setCartCount(cartCount + 1);
   }
 
+    //function to handle cartCount using Context
+  const toggleMinusCartCount = () => {
+    setCartCount(cartCount - 1);
+  }
+
     //function to handle ProductsToCart using Context
   const togglePrdToCart = (newData) => {
     setPrdToCart(oldData => [...oldData,newData]);
   }
 
+    //function to handle ProductsFromCart using Context
+  const togglePrdFromCart = (newArray) => {
+    setPrdToCart(newArray);
+  }
+
     //function to handle total of amount
   const toggleTotalPrice = (newPrdPrice) =>{
     setTotalPrice(totalPrice + newPrdPrice)
+  }
+
+    //function to handle total of amount
+  const toggleMinusTotalPrice = (PrdPrice) =>{
+    setTotalPrice(totalPrice - PrdPrice)
   }
 
     //Execute getData function
@@ -55,7 +70,8 @@ function App() {
       <DataContext.Provider value={{myData:myData, 
         cartCount:cartCount, toggleCartCount:toggleCartCount,  
         togglePrdToCart:togglePrdToCart,  prdToCart:prdToCart,  
-        toggleTotalPrice:toggleTotalPrice,  totalPrice:totalPrice}}>
+        toggleTotalPrice:toggleTotalPrice,  totalPrice:totalPrice,
+        togglePrdFromCart:togglePrdFromCart, toggleMinusCartCount:toggleMinusCartCount, toggleMinusTotalPrice:toggleMinusTotalPrice}}>
 
         <Switch>
           

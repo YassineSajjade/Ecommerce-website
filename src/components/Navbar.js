@@ -21,6 +21,7 @@ function Navbar() {
    
         //Variable for fix the navbar at top
     const active = scroll ? "fixed-top " : "";
+    const shadow = scroll ? " 0px 0px 5px 0px #adb5bd " : "";
 
         // function to handle mobile meni
     const showMenu = () => {
@@ -234,7 +235,7 @@ function Navbar() {
                 </div>
             </div>
             <div className="header">
-                <div className={`container-fluid ${active}`}>
+                <div className={`container-fluid ${active}`} style={{boxShadow: shadow}}>
                     <nav className="navbar navbar-expand-lg navbar-light">
                         <Link className="nav-brand" to="/">Groc Store</Link>
 

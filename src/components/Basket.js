@@ -11,8 +11,17 @@ import { DataContext } from '../App';
 
 function Basket() {
 
-    //get context data
+        //get context data
     const contextValue = useContext(DataContext);
+
+        //function to remove item from basket list
+    const removeItem = (index,itemPrix) => {
+        const array = [...contextValue.prdToCart];
+        array.splice(index,1);
+        contextValue.togglePrdFromCart(array);
+        contextValue.toggleMinusCartCount();
+        contextValue.toggleMinusTotalPrice(itemPrix);
+    }
 
         //function to handle products for basket
     const handleDataShop = () => {
@@ -62,7 +71,7 @@ function Basket() {
 
                                 {/* 5 */}
                                 <div className="grid__item" >
-                                    <Link className="cart-remove" to="#">
+                                    <Link className="cart-remove" to="/basket" onClick={() => removeItem(index,item.prix)}>
                                         <span>
                                             <i className="fas fa-times"></i>
                                         </span>
@@ -121,7 +130,7 @@ function Basket() {
                                 <p className="cart-total-price" style={{ margin: '0 0 15px 0' }}>
                                     <span className="cart__subtotal-title h6">Subtotal :</span>
                                     <span className="cart__subtotal h6">
-                                        <span className="money" data-currency-usd="$100.00">$100.00</span>
+                                        <span className="money" data-currency-usd={`$${contextValue.totalPrice}`}>${contextValue.totalPrice}</span>
                                     </span>
                                 </p>
 
@@ -161,7 +170,6 @@ function Basket() {
 
     return (
         <>
-            {/* <Navbar cartCountP={cartCount} /> */}
             <Navbar />
             <div className="cart-header">
                 <h1>Your shooping cart</h1>
@@ -177,10 +185,8 @@ function Basket() {
                             <div className="container">
 
                                 {/* for cart empty OR had products */}
-
                                 {  BasketMain  }
                                 
-
                             </div>
                         </div>
                     </div>
