@@ -44,7 +44,7 @@ function ModalSuccess({fadeP, displayP, showSuccessModalP, nameP, priceP, photoP
                         </div>
                     </div>
 
-                    <a href="#" className="close-modal">
+                    <a className="close-modal">
                         <i className="far fa-times-circle" onClick={showSuccessModalP}></i>
                     </a>
 

@@ -1,8 +1,9 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import "./OurProducts.css";
 import './ModalSuccess';
 import ModalSuccess from './ModalSuccess';
+import ModalError from './ModalError';
 import { DataContext } from '../App';
 
 function OurProducts() {
@@ -10,38 +11,56 @@ function OurProducts() {
         //get context data
     const contextValue = useContext(DataContext);
 
-        // some state to handle modal //
-    const [display,setDisplay] = useState("hidden");
-    const [show,setShow] = useState(false);
+        // some state to handle SuccessModal //
+    const [displaySuccess,setDisplaySuccess] = useState("hidden");
+    const [showSuccess,setShowSuccess] = useState(false);
     const [fade,setFade] = useState("animate__fadeOut");
+
+        // some state to handle ErrorModal //
+    const [displayError,setDisplayError] = useState("hidden");
+    const [showError,setShowError] = useState(false);
+    // const [fade,setFade] = useState("animate__fadeOut");
 
         //states of data passing to the Modal //
     const [name,setName] = useState('unavailable'); //=> name of Produit
     const [price,setPrice] = useState(0);           //=> price of Produit
-    //const [totalPrice,setTotalPrice] = useState(0); //=> total price of Produits
     const [photo,setPhoto] = useState('');          //=> photo of produit
 
         // function to show and hide success modal //
-    const showSuccessModal = (value) => {
-        if (!show) {
-            setDisplay("visible");
-            setShow(true);
+    const showSuccessModal = (product) => {
+        if (!showSuccess) {
+            setDisplaySuccess("visible");
+            setShowSuccess(true);
             setFade("animate__fadeIn");
             contextValue.toggleCartCount() ;
-            setName(value.name);
-            setPrice(value.prix);
-            setPhoto(value.photo);
-            //setTotalPrice(value.prix + totalPrice);
-            contextValue.toggleTotalPrice(value.prix);
-            contextValue.togglePrdToCart(value);
+            setName(product.name);
+            setPrice(product.prix);
+            setPhoto(product.photo);
+            contextValue.toggleTotalPrice(product.prix);
+            contextValue.togglePrdToCart(product);
+            // setDataPrds(oldData => [...oldData,value]);
+            
         } else {
             setFade("animate__fadeOut");
-            setDisplay("hidden");
-            setShow(false);
+            setDisplaySuccess("hidden");
+            setShowSuccess(false);
         }
     }
+        //  function to show and hide error modal
+    const showErrorModal = (product) => {
+        if (!showError) {
+            setDisplayError("visible");
+            setShowError(true);
+            setFade("animate__fadeIn");
+            setName(product.name);
+            setTimeout(()=>{
+                setFade("animate__fadeOut");
+                setDisplayError("hidden");
+                setShowError(false);
+            },3500);
+        } 
+    }
     
-
         //function to handle data from context (myData)
     const handleData = () =>{
         return(
@@ -58,7 +77,7 @@ function OurProducts() {
                             <div className="item-product-body">
                                 <Link to="#">{item.name}</Link>
                                 <span>${item.prix}</span>
-                                <Link className="btn" to="#" onClick={() => showSuccessModal(item)}>Add To Cart</Link>
+                                <Link className="btn" to="#" onClick={() => handleModal(item)}>Add To Cart</Link>
                             </div>
                         </div>
                     </li>
@@ -83,6 +102,22 @@ function OurProducts() {
         
     }
    
+        //function to verify (if we gonna show SuccessModal OR ErroModal)
+    const handleModal = (theItem) =>{
+            if(contextValue.prdToCart.length > 0){
+                
+                const checkPrds = contextValue.prdToCart.find(elem => {return elem.id === theItem.id});
+                if(checkPrds){
+                    showErrorModal(theItem);//=>   Product already exist
+                }else{
+                    showSuccessModal(theItem);//=>  Add the product if not exist
+                }
+            }else{
+                showSuccessModal(theItem);
+            }
+            
+     
+    }
 
     return (
         
@@ -147,16 +182,11 @@ function OurProducts() {
             {/* end loading-modal */}
 
             {/* success-modal */}
-            <ModalSuccess fadeP={fade} displayP={display} showSuccessModalP={showSuccessModal} nameP={name} priceP={price} photoP={photo} />
+            <ModalSuccess fadeP={fade} displayP={displaySuccess} showSuccessModalP={showSuccessModal} nameP={name} priceP={price} photoP={photo} />
             {/* end success-modal */}
-
+            <ModalError fadeP={fade} displayP={displayError} nameP={name}/>
             {/* error-modal */}
-            <div className="error-modal modale" style={{display: "none"}}>
-                <div className="modal-inner">
-                    <div className="error-title">Error</div>
-                    <div className="error-message">All 1 Watermelon are in your cart.</div>
-                </div>
-            </div>
+           
             {/* en error-modal */}
         </>
     )

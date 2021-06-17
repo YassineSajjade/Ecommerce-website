@@ -56,6 +56,7 @@ function App() {
         cartCount:cartCount, toggleCartCount:toggleCartCount,  
         togglePrdToCart:togglePrdToCart,  prdToCart:prdToCart,  
         toggleTotalPrice:toggleTotalPrice,  totalPrice:totalPrice}}>
+
         <Switch>
           
             <Route path="/login">
@@ -63,14 +64,13 @@ function App() {
             </Route>
             <Route path="/basket">
               <Basket/>
-              {/* <Basket parentCallBackApp={handleCallback} dataToCartP={dataToCart} /> */}
             </Route>
             <Route path="/">
               <Home/>
-              {/* <Home parentCallBackApp={handleCallback}/> */}
             </Route>
           
         </Switch>
+
         </DataContext.Provider>
       </div>
     </Router>
