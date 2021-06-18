@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import "./Basket.css";
 import Navbar from "./Navbar";
@@ -14,6 +14,9 @@ function Basket() {
         //get context data
     const contextValue = useContext(DataContext);
 
+        //variablefor QTE
+    const [qte,setQte] = useState(1); 
+
         //function to remove item from basket list
     const removeItem = (index,itemPrix) => {
         const array = [...contextValue.prdToCart];
@@ -21,6 +24,28 @@ function Basket() {
         contextValue.togglePrdFromCart(array);
         contextValue.toggleMinusCartCount();
         contextValue.toggleMinusTotalPrice(itemPrix);
+    }
+
+        //function handle Quantite of product
+    const handleQte = (event, index) => {
+        const target = event.target.value;
+
+        console.log(`${target} and ${index}`);
+    }
+
+        //function handle adding QTE
+    const addingQte = (evnt, index) =>{
+        setQte(qte + 1);
+        console.log(index);
+    }
+
+        //function handle minusing QTE
+    const minusingQte = () =>{
+        if(qte <= 1){
+            setQte(1)
+        }else{
+            setQte(qte - 1);
+        }
     }
 
         //function to handle products for basket
@@ -55,9 +80,9 @@ function Basket() {
                                 {/* 3 */}
                                 <div className="grid__item" >
                                     <div className="qty-box-set">
-                                        <input className="qtyminus1" type="button" value="-" />
-                                        <input className="quantity-selector cart-number" type="number" value="1" min="0" />
-                                        <input className="qtyplus1" type="button" value="+" />
+                                        <input className="qtyminus1" type="button" value="-" onClick={minusingQte} />
+                                        <input className="quantity-selector cart-number" type="number" value={qte} min="1" onChange={evnt => handleQte(evnt,index) } />
+                                        <input className="qtyplus1" type="button" value="+" onClick={evnt => addingQte(evnt, index)} />
                                     </div>
                                 </div>
 
