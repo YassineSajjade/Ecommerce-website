@@ -114,7 +114,7 @@ function Basket() {
                     {/* buttons actions */}
                     <div className="btn-actions">
                         <Link className="btn" to="/">Continue shopping</Link>
-                        <input className="btn update-cart" type="submit" name="update" value="Update Cart" style={{ float: 'right' }} />
+                        <input className="btn update-cart" type="submit" name="update" value="update cart" style={{ float: 'right' }} />
                     </div>
 
                 </div>

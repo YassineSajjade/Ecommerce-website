@@ -65,11 +65,11 @@ function Navbar() {
                             <img src={item.photo} alt="" style={{ maxWidth: "100%", border: "0 none" }} />
                         </Link>
                         <div className="product-details">
-                            <a href="/" title="Remove this item" className="btn-remove">
+                            <Link to="" title="Remove this item" className="btn-remove" onClick={() => removeItemLittleBasketCart(index,item)}>
                                 <span className="fas fa-times"></span>
-                            </a>
+                            </Link>
                             <p className="product-name">
-                                <Link to="#">{item.name}</Link>
+                                <Link to="">{item.name}</Link>
                             </p>
                             <div className="cart-collateral">
                                 1 x
@@ -108,10 +108,10 @@ function Navbar() {
                     Check Out
                 </button>
 
-                <button className="btn text-cart" style={{ marginLeft: "5px" }}>
+                <Link to="/basket" className="btn text-cart" style={{ marginLeft: "5px" }}>
                     <i className="fas fa-shopping-basket"></i>
                     View Cart
-                </button>
+                </Link>
 
             </div>
 
@@ -120,7 +120,14 @@ function Navbar() {
             <p>Your cart is currently empty!</p>
         </div>;
 
-    
+    //Function remove item from littleBasketCart
+    const removeItemLittleBasketCart = (index,item) =>{
+        const array = [...value.prdToCart];
+        array.splice(index,1);
+        value.togglePrdFromCart(array);
+        value.toggleMinusCartCount();
+        value.toggleMinusTotalPrice(item.prix);
+    }
 
     //React Effect
     useEffect(() => {
