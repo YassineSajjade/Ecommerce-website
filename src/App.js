@@ -13,10 +13,11 @@ export const DataContext = createContext();
 function App() {
 
   
-  const [myData, setmyData] = useState([]); //=> Array for store my data from Back-end
-  const [cartCount, setCartCount] = useState(0);  //=>  cart count for basket 
-  const [prdToCart, setPrdToCart] = useState([]); //=> Array to store dataProducts for basket
+  const [myData, setmyData]         = useState([]); //=> Array for store my data from Back-end
+  const [cartCount, setCartCount]   = useState(0);  //=>  cart count for basket 
+  const [prdToCart, setPrdToCart]   = useState([]); //=> Array to store dataProducts for basket
   const [totalPrice, setTotalPrice] = useState(0); //=> Total of amount
+  const [qty, setQty]               = useState(1);  //=> Quantite for products in the basketList 
 
     //Fetch data in Back-end
   const getData = () => {
@@ -58,6 +59,31 @@ function App() {
     setTotalPrice(totalPrice - PrdPrice)
   }
 
+    //function to add QTY
+  const toggleAddQty = (itemId) => {
+    myData.map(  item => {
+      if(item.id === itemId){
+        item.qty = item.qty + 1;
+        setTotalPrice(totalPrice + item.prix);
+      }
+    } );
+  }
+
+    //function to minus QTY
+  const toggleMinusQty = (itemId) => {
+    myData.map(  item => {
+      if(item.id === itemId){
+        if(item.qty <= 1){
+          item.qty = 1;
+        }else{
+          item.qty = item.qty - 1;
+          setTotalPrice(totalPrice - item.prix);
+        }
+      }
+    } );
+  }
+
+
     //Execute getData function
   useEffect(() => {
     getData();
@@ -71,7 +97,8 @@ function App() {
         cartCount:cartCount, toggleCartCount:toggleCartCount,  
         togglePrdToCart:togglePrdToCart,  prdToCart:prdToCart,  
         toggleTotalPrice:toggleTotalPrice,  totalPrice:totalPrice,
-        togglePrdFromCart:togglePrdFromCart, toggleMinusCartCount:toggleMinusCartCount, toggleMinusTotalPrice:toggleMinusTotalPrice}}>
+        togglePrdFromCart:togglePrdFromCart, toggleMinusCartCount:toggleMinusCartCount, toggleMinusTotalPrice:toggleMinusTotalPrice,
+        toggleAddQty:toggleAddQty, toggleMinusQty:toggleMinusQty}}>
 
         <Switch>
           

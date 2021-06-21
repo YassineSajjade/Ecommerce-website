@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from "react-router-dom";
 import "./Basket.css";
 import Navbar from "./Navbar";
@@ -15,7 +15,7 @@ function Basket() {
     const contextValue = useContext(DataContext);
 
         //variablefor QTE
-    const [qte,setQte] = useState(1); 
+    const [qte,setQte] = useState(0); 
 
         //function to remove item from basket list
     const removeItem = (index,itemPrix) => {
@@ -34,18 +34,15 @@ function Basket() {
     }
 
         //function handle adding QTE
-    const addingQte = (evnt, index) =>{
+    const addingQte = (evt,itemId) =>{
+        contextValue.toggleAddQty(itemId);
         setQte(qte + 1);
-        console.log(index);
     }
 
         //function handle minusing QTE
-    const minusingQte = () =>{
-        if(qte <= 1){
-            setQte(1)
-        }else{
-            setQte(qte - 1);
-        }
+    const minusingQte = (evt,itemId) =>{
+        contextValue.toggleMinusQty(itemId);
+        setQte(qte - 1);
     }
 
         //function to handle products for basket
@@ -53,6 +50,7 @@ function Basket() {
         return (
             contextValue.prdToCart.map((item, index) => {
                 return (
+                    
                     <div className="cart-row" key={index}>
                         <div className="grid-full cart-row-table-large text-center">
                             <div className="grid grid__item cart-items wide--two-tenths">
@@ -80,9 +78,9 @@ function Basket() {
                                 {/* 3 */}
                                 <div className="grid__item" >
                                     <div className="qty-box-set">
-                                        <input className="qtyminus1" type="button" value="-" onClick={minusingQte} />
-                                        <input className="quantity-selector cart-number" type="number" value={qte} min="1" onChange={evnt => handleQte(evnt,index) } />
-                                        <input className="qtyplus1" type="button" value="+" onClick={evnt => addingQte(evnt, index)} />
+                                        <input className="qtyminus1" type="button" value="-" onClick={(evn) =>  minusingQte(evn, item.id)} />
+                                        <input className="quantity-selector cart-number" type="number" value={contextValue.myData[index].qty}  />
+                                        <input className="qtyplus1" type="button" value="+" onClick={evnt => addingQte(evnt, item.id)} />
                                     </div>
                                 </div>
 
@@ -90,7 +88,7 @@ function Basket() {
                                 <div className="grid__item" >
                                     <span className="cart-total">Total:</span>
                                     <span className="h5" style={{ marginLeft: "5px" }} >
-                                        <span className="money">${item.prix}</span>
+                                        <span className="money">${item.prix * item.qty}</span>
                                     </span>
                                 </div>
 
@@ -106,8 +104,8 @@ function Basket() {
                             </div>
                         </div>
                     </div>
-
                 )
+                
             })
         )
     }
@@ -133,7 +131,7 @@ function Basket() {
                     </div>
 
                     {/* cart row */}
-
+                    
                     {handleDataShop()}
 
                     {/* buttons actions */}
@@ -191,7 +189,7 @@ function Basket() {
                     </p>
                 </div>;
 
-    
+ 
 
     return (
         <>

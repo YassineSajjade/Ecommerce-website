@@ -38,8 +38,6 @@ function OurProducts() {
             setPhoto(product.photo);
             contextValue.toggleTotalPrice(product.prix);
             contextValue.togglePrdToCart(product);
-            // setDataPrds(oldData => [...oldData,value]);
-            
         } else {
             setFade("animate__fadeOut");
             setDisplaySuccess("hidden");
