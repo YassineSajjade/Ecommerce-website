@@ -26,13 +26,6 @@ function Basket() {
         contextValue.toggleMinusTotalPrice(itemPrix);
     }
 
-        //function handle Quantite of product
-    const handleQte = (event, index) => {
-        const target = event.target.value;
-
-        console.log(`${target} and ${index}`);
-    }
-
         //function handle adding QTE
     const addingQte = (evt,itemId) =>{
         contextValue.toggleAddQty(itemId);
@@ -109,6 +102,12 @@ function Basket() {
             })
         )
     }
+
+    useEffect(() => {
+        localStorage.setItem('prdsToCart', JSON.stringify(contextValue.prdToCart));
+        // const data = localStorage.getItem('prdsToCart');
+        // contextValue.togglePrdFromCart(JSON.parse(data))
+    }, [contextValue.prdToCart])
 
         //function to show main (basket empty OR not)
     const BasketMain = contextValue.prdToCart.length > 0 ? 
@@ -189,7 +188,6 @@ function Basket() {
                     </p>
                 </div>;
 
- 
 
     return (
         <>

@@ -17,7 +17,6 @@ function App() {
   const [cartCount, setCartCount]   = useState(0);  //=>  cart count for basket 
   const [prdToCart, setPrdToCart]   = useState([]); //=> Array to store dataProducts for basket
   const [totalPrice, setTotalPrice] = useState(0); //=> Total of amount
-  const [qty, setQty]               = useState(1);  //=> Quantite for products in the basketList 
 
     //Fetch data in Back-end
   const getData = () => {
@@ -82,12 +81,24 @@ function App() {
       }
     } );
   }
-
-
+    
     //Execute getData function
   useEffect(() => {
     getData();
-  },[]);
+  },[prdToCart]);
+
+  
+  useEffect(()=>{
+
+    const data = localStorage.getItem('prdsToCart')
+    if(data){
+      setPrdToCart(JSON.parse(data))
+     }
+    },[]);
+
+    useEffect(() => {
+      localStorage.setItem('prdsToCart', JSON.stringify(prdToCart));
+  })
   
 
   return (
