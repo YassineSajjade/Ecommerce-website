@@ -90,7 +90,12 @@ function App() {
   
   useEffect(()=>{
 
-    const data = localStorage.getItem('prdsToCart')
+    const cartC = localStorage.getItem('cartCount');
+    if(cartC){
+      setCartCount( parseInt(cartC) );
+    }
+
+    const data = localStorage.getItem('prdsToCart');
     if(data){
       setPrdToCart(JSON.parse(data))
      }
@@ -98,6 +103,8 @@ function App() {
 
     useEffect(() => {
       localStorage.setItem('prdsToCart', JSON.stringify(prdToCart));
+      localStorage.setItem('cartCount', cartCount);
+      
   })
   
 
