@@ -103,11 +103,11 @@ function Basket() {
         )
     }
 
-    useEffect(() => {
-        localStorage.setItem('prdsToCart', JSON.stringify(contextValue.prdToCart));
-        // const data = localStorage.getItem('prdsToCart');
-        // contextValue.togglePrdFromCart(JSON.parse(data))
-    }, [contextValue.prdToCart])
+    // useEffect(() => {
+    //     localStorage.setItem('prdsToCart', JSON.stringify(contextValue.prdToCart));
+    //     // const data = localStorage.getItem('prdsToCart');
+    //     // contextValue.togglePrdFromCart(JSON.parse(data))
+    // }, [contextValue.prdToCart])
 
         //function to show main (basket empty OR not)
     const BasketMain = contextValue.prdToCart.length > 0 ? 

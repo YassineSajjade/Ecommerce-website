@@ -38,6 +38,7 @@ function OurProducts() {
             setPhoto(product.photo);
             contextValue.toggleTotalPrice(product.prix);
             contextValue.togglePrdToCart(product);
+            console.log(product.prix);
         } else {
             setFade("animate__fadeOut");
             setDisplaySuccess("hidden");
@@ -63,7 +64,7 @@ function OurProducts() {
         //function to handle data from context (myData)
     const handleData = () =>{
         return(
-            contextValue.myData != null 
+            contextValue.myData.length > 0 
             ? contextValue.myData.map( (item, index) => {
                 return (
                     <li className="item-product" key={index}>
@@ -83,20 +84,22 @@ function OurProducts() {
                 )
                 
             }) 
-            :<li className="item-product" >
-                <div>
-                    <div className="item-product-header">
-                        <Link to="#">
-                            <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png" alt=""/>
-                        </Link>
-                    </div>
-                    <div className="item-product-body">
-                        <Link to="#">Not Available</Link>
-                            <span>Not Available</span>
-                        <Link className="btn" to="#" >Add To Cart</Link>
-                    </div>
-                </div>
-            </li>
+            // :<li className="item-product" >
+            //     <div>
+            //         <div className="item-product-header">
+            //             <Link to="#">
+            //                 <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png" alt=""/>
+            //             </Link>
+            //         </div>
+            //         <div className="item-product-body">
+            //             <Link to="#">Not Available</Link>
+            //                 <span>Not Available</span>
+            //             <Link className="btn" to="#" >Add To Cart</Link> 
+                        
+            //         </div>
+            //     </div>
+            // </li>
+            :<div style={{marginTop: '20px', marginBottom: '20px'}} ><b>No data available now, check back later</b></div>
         )
         
     }
@@ -183,9 +186,9 @@ function OurProducts() {
             {/* success-modal */}
             <ModalSuccess fadeP={fade} displayP={displaySuccess} showSuccessModalP={showSuccessModal} nameP={name} priceP={price} photoP={photo} />
             {/* end success-modal */}
-            <ModalError fadeP={fade} displayP={displayError} nameP={name}/>
+            
             {/* error-modal */}
-           
+            <ModalError fadeP={fade} displayP={displayError} nameP={name}/>
             {/* en error-modal */}
         </>
     )

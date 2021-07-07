@@ -19,11 +19,20 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0); //=> Total of amount
 
     //Fetch data in Back-end
+  // const getData = () => {
+  //   fetch('http://localhost:5000/products')
+  //   .then(res => res.json())
+  //   .then(data => {
+  //     setmyData(data.products);
+  //   })
+  //   .catch(err => console.log(err));
+  // }
+    //Fetch data in Back-end
   const getData = () => {
-    fetch('http://localhost:5000/products')
+    fetch('https://e-commercebackend.000webhostapp.com/test.php')
     .then(res => res.json())
     .then(data => {
-      setmyData(data.products);
+      setmyData(data);
     })
     .catch(err => console.log(err));
   }
@@ -50,7 +59,7 @@ function App() {
 
     //function to handle adding productPrice to total of amount
   const toggleTotalPrice = (newPrdPrice) =>{
-    setTotalPrice(totalPrice + newPrdPrice)
+    setTotalPrice(parseFloat(totalPrice) + parseFloat(newPrdPrice));
   }
 
     //function to handle removing productPrice for total of amount
@@ -88,24 +97,24 @@ function App() {
   },[prdToCart]);
 
   
-  useEffect(()=>{
+  // useEffect(()=>{
 
-    const cartC = localStorage.getItem('cartCount');
-    if(cartC){
-      setCartCount( parseInt(cartC) );
-    }
+  //   const cartC = localStorage.getItem('cartCount');
+  //   if(cartC){
+  //     setCartCount( parseInt(cartC) );
+  //   }
 
-    const data = localStorage.getItem('prdsToCart');
-    if(data){
-      setPrdToCart(JSON.parse(data))
-     }
-    },[]);
+  //   const data = localStorage.getItem('prdsToCart');
+  //   if(data){
+  //     setPrdToCart(JSON.parse(data))
+  //    }
+  //   },[]);
 
-    useEffect(() => {
-      localStorage.setItem('prdsToCart', JSON.stringify(prdToCart));
-      localStorage.setItem('cartCount', cartCount);
+  //   useEffect(() => {
+  //     localStorage.setItem('prdsToCart', JSON.stringify(prdToCart));
+  //     localStorage.setItem('cartCount', cartCount);
       
-  })
+  // })
   
 
   return (
